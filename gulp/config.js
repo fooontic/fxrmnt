@@ -5,7 +5,7 @@ module.exports = {
 		Src: { // Set source paths
 			Styles: 'src/scss/**/*.scss',
 			MainStyleFile: 'src/scss/main.scss',
-			Pug: 'src/jade/**/*.pug',
+			Pug: 'src/pug/**/*.pug',
 			JS: 'src/js/main.js',
 			Images: 'src/img/**/*.*',
 			Txt: ['src/humans.txt', 'src/robots.txt', 'src/.htaccess','src/CHANGELOG.md','src/README.md'],

@@ -2,8 +2,7 @@
 var gulp = 				require('gulp'),
 	config = 			require('./config'),
 	sass = 				require('gulp-sass'), // Compile SASS to CSS
-	minifycss = 		require('gulp-minify-css'), // Minify CSS
-	cssshrink = 		require('gulp-cssshrink'),
+	cleancss = 		require('gulp-clean-css'), // Minify CSS
 	csscomb = 			require('gulp-csscomb'), // Coding style formatter for CSS
 	autoprefixer = 		require('gulp-autoprefixer'), // Prefix CSS
 	sourcemaps = 		require('gulp-sourcemaps'), // Write source maps
@@ -16,7 +15,7 @@ var gulp = 				require('gulp'),
 	inlineSVG = 		require('postcss-inline-svg'),
 	svgo = 				require('postcss-svgo'),
 	plumber = 			require('gulp-plumber'); // Report errors from gulp-plugins
-	
+
 
 gulp.task('sass', function () {
 	gulp.src(config.pathTo.Src.MainStyleFile)
@@ -28,7 +27,6 @@ gulp.task('sass', function () {
 		.pipe(sourcemaps.init())
 		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(autoprefixer(config.autoprefixerBrowsers))
-		//.pipe(cssshrink())
 		.pipe(postcss([
 			inlineSVG,
 			svgo
@@ -36,7 +34,7 @@ gulp.task('sass', function () {
 		.pipe(csscomb())
 		.pipe(gulp.dest(config.pathTo.Build.Styles))
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(minifycss())
+		.pipe(cleancss())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(config.pathTo.Build.Styles))
 		.pipe(reload({stream: true}));

@@ -2,8 +2,8 @@
 var gulp = require('gulp'),
 	config = require('./config');
 
-gulp.task('watch', ['webserver'], function(){	
-	gulp.watch([config.pathTo.Src.Jade], function(event, cb) {
+gulp.task('watch', ['webserver'], function(){
+	gulp.watch([config.pathTo.Src.Pug], function(event, cb) {
 		gulp.start('pug')
 	});
 	gulp.watch([config.pathTo.Src.Styles], function(event, cb) {

@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 gulp.task('build', function(callback) {
 	runSequence(
 		'clean',
-		'jade',
+		'pug',
 		// 'bower',
 		'js',
 		// 'png-sprite',
