@@ -563,7 +563,16 @@ html
     font-size: 1.999rem;
     line-height: 1.4;
 
-    margin: 1em 0 .6em;
+    max-width: 800px; 
+    margin: 1em auto .5em;
+}
+
+.flow
+{
+    font-size: 1rem;
+
+    max-width: 800px; 
+    margin: 1em auto 12vh;
 }
 
 @media (min-width: 768px)
@@ -589,10 +598,11 @@ html
 .page-header .m18-logo
 {
     position: absolute;
+    top: 40px;
+    left: 6.5vw;
 
     width: 85px;
     height: 51px;
-    margin: 40px 0 0 6.5vw;
 
     cursor: pointer;
     -webkit-transition: -webkit-transform .3s ease-in;
@@ -607,15 +617,28 @@ html
             transform: scale(1.1, 1.1);
 }
 
+@media (min-width: 1024px)
+{
+    .page-header
+    {
+        height: 80vmin;
+        min-height: 660px;
+        max-height: 860px;
+        margin-bottom: 18vh;
+    }
+}
+
 .container
 {
-    position: relative; 
+    position: relative;
 
     display: block;
 
     box-sizing: border-box;
     width: 100%;
     min-width: 375px;
+    max-width: 1440px;
+    margin: 0 auto; 
     padding: 0 6.5vw;
 }
 
@@ -743,17 +766,64 @@ html
     }
 }
 
+@-webkit-keyframes cardsShadowAppear
+{
+    from
+    {
+        box-shadow: 0 0 0 0 transparent;
+    }
+    to
+    {
+        box-shadow: 0 20px 60px -10px rgba(0, 0, 0, .4);
+    }
+}
+
+@keyframes cardsShadowAppear
+{
+    from
+    {
+        box-shadow: 0 0 0 0 transparent;
+    }
+    to
+    {
+        box-shadow: 0 20px 60px -10px rgba(0, 0, 0, .4);
+    }
+}
+
 .case
 {
-    box-sizing: border-box; 
-    width: 100%;
+    box-sizing: border-box;
+    margin-right: -6.5vw; 
+    margin-bottom: 10vh;
+    margin-left: -6.5vw;
+
+    box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .3);
 }
 .case__img img
 {
-    display: block; 
+    display: block;
 
+    width: 100%; 
     max-width: 100%;
     height: auto;
+}
+
+@media (min-width: 768px)
+{
+    .case
+    {
+        width: 100%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .case
+    {
+        margin-bottom: 18vh;
+    }
 }
 
 .fix-remont .page-header
@@ -769,8 +839,8 @@ html
 {
     display: none;
 
-    -webkit-transition: position, top, right, bottom, left .3s ease-out;
-            transition: position, top, right, bottom, left .3s ease-out;
+    -webkit-transition: position, top, right, bottom, left .6s ease-out;
+            transition: position, top, right, bottom, left .6s ease-out;
 }
 .fix-remont .page-header .main-title
 {
@@ -805,6 +875,8 @@ html
     .fix-remont .page-header
     {
         min-height: 85vh;
+
+        background-image: url(../img/cover.jpg);
     }
     .fix-remont .page-header .container
     {
@@ -837,11 +909,14 @@ html
     }
     .fix-remont .page-header .cards__item
     {
-        position: relative; 
+        position: relative;
 
         overflow: hidden;
 
         margin-right: 3vw;
+
+        -webkit-animation: cardsShadowAppear .6s .8s ease-out 1 both;
+                animation: cardsShadowAppear .6s .8s ease-out 1 both; 
 
         border-radius: 5px;
         box-shadow: 0 20px 60px -10px rgba(0, 0, 0, .4);
@@ -892,15 +967,25 @@ html
 {
     .fix-remont .page-header
     {
-        min-height: 700px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        min-height: initial;
+
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
     }
     .fix-remont .page-header .container
     {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-
-        min-height: 700px; 
 
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;

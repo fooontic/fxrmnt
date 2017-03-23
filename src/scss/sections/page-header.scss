@@ -5,7 +5,7 @@
 
 	& .promo.cards {
 		display: none;
-		transition: position, top, right, bottom, left .3s ease-out;
+		transition: position, top, right, bottom, left .6s ease-out;
 	}
 
 	& .main-title {
@@ -32,6 +32,7 @@
 @media ($min-md) {
 	.page-header {
 		min-height: 85vh;
+		background-image: url(../img/cover.jpg);
 
 		& .container { position: static;}
 
@@ -55,7 +56,7 @@
 			overflow: hidden;
 			box-shadow: 0 20px 60px -10px rgba(0,0,0,.4);
 			position: relative;
-
+			animation: cardsShadowAppear .6s .8s ease-out 1 both;
 
 			&::after {
 				content: '';
@@ -88,13 +89,15 @@
 
 @media ($min-lg) {
 	.page-header {
-		min-height: 700px;
+		min-height: initial;
+		display: flex;
+		flex-flow: row;
+		align-items: center;
 
 		& .container {
 			display: flex;
 			flex-flow: row nowrap;
 			align-items: center;
-			min-height: 700px;
 
 		}
 

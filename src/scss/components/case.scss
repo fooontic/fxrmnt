@@ -1,6 +1,28 @@
 .case {
-	width: 100%;
 	box-sizing: border-box;
+	margin-bottom: 10vh;
+	box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .3);
+	margin-left: -6.5vw;
+	margin-right: -6.5vw;
 
-	&__img img { @include img-fluid();}
+	&__img img {
+		@include img-fluid();
+		width: 100%;
+	}
+}
+
+
+@media ($min-md) {
+	.case {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+@media ($min-lg) {
+	.case {
+		margin-bottom: 18vh;
+	}
 }
