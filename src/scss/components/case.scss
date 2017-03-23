@@ -1,0 +1,6 @@
+.case {
+	width: 100%;
+	box-sizing: border-box;
+
+	&__img img { @include img-fluid();}
+}

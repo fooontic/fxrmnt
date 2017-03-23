@@ -8,10 +8,17 @@
 @import 'core/base';
 @import 'core/type';
 
+@import 'mixins/img';
+
 @import 'components/header';
 @import 'components/grid';
 @import 'components/animations';
+@import 'components/case';
 
 
-@import 'sections/page-header';
-@import 'sections/intro';
+.fix-remont {
+
+	@import 'sections/page-header';
+	@import 'sections/intro';
+
+}

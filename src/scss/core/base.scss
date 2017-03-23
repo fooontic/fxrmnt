@@ -11,3 +11,11 @@ html {
 	overflow: hidden;
 	display: block;
 }
+
+
+
+@media ($min-md) {
+	html {
+		font-size: 24px;
+	}
+}

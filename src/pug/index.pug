@@ -34,10 +34,11 @@ body.fix-remont
 			.container
 
 				h2.title Ремонт — это легко!
-				p ««Fix Ремонт» качественно и&nbsp;эффективно решает комплекс задач, связанных с&nbsp;ремонтом квартиры. Перед нами стояла задача спроектировать сервис, отличающий его среди конкурирующих студий выполняющих «ремонт под ключ».»
+				p.flow «Fix Ремонт» качественно и&nbsp;эффективно решает комплекс задач, связанных с&nbsp;ремонтом квартиры. Перед нами стояла задача спроектировать сервис, отличающий его среди конкурирующих студий выполняющих «ремонт под ключ».»
 
-				//- picture
-				//-	 source(srcset="img/main-page--sm.jpg" media="(max-width: 767px;)" alt="Главная страница сайта Fix Remont")
-				//-	 source(srcset="img/main-page--md.jpg" media="(max-width: 1023px;)" alt="Главная страница сайта Fix Remont")
-				//-	 source(srcset="img/main-page.jpg" media="(min-width: 1024px;)" alt="Главная страница сайта Fix Remont")
-				//-   img(src="img/main-page.jpg", alt="Главная страница сайта Fix Remont")
+				.case
+					picture.case__img
+						source(media="(min-width: 320px) and (max-width: 767px)" srcset="img/main-page--sm.jpg" alt="Главная страница сайта Fix Remont")
+						source(media="(min-width: 767px) and (max-width: 1023px)" srcset="img/main-page--md.jpg" alt="Главная страница сайта Fix Remont")
+						source(srcset="img/main-page.jpg" media="(min-width: 1024px)" alt="Главная страница сайта Fix Remont")
+						img(srcset="img/main-page.jpg", alt="Главная страница сайта Fix Remont")
