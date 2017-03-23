@@ -534,14 +534,14 @@ html
 
 .main-title
 {
-    font-size: 2.827rem;
-    font-weight: 800;
+    font-size: 2.875rem;
+    font-weight: 900;
     line-height: 1.4;
 
     max-width: 500px; 
     margin: 1em 0 .5em;
 
-    letter-spacing: .05em;
+    letter-spacing: .04em;
     text-transform: uppercase;
 
     color: #fff;
@@ -619,6 +619,14 @@ html
     padding: 0 6.5vw;
 }
 
+@media (min-width: 1024px)
+{
+    .container
+    {
+        padding: 0 calc(8.33% + 20px);
+    }
+}
+
 @-webkit-keyframes enterDown
 {
     from
@@ -644,6 +652,34 @@ html
     {
         -webkit-transform: translateY(0);
                 transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes enterRight
+{
+    from
+    {
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+    }
+    to
+    {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+
+@keyframes enterRight
+{
+    from
+    {
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+    }
+    to
+    {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
 }
 
@@ -732,6 +768,9 @@ html
 .fix-remont .page-header .promo.cards
 {
     display: none;
+
+    -webkit-transition: position, top, right, bottom, left .3s ease-out;
+            transition: position, top, right, bottom, left .3s ease-out;
 }
 .fix-remont .page-header .main-title
 {
@@ -815,18 +854,77 @@ html
         display: block;
 
         width: 100%;
-        height: 40px;
+        height: 50px;
 
         content: '';
 
-        background: -webkit-linear-gradient(top, transparent 10%, rgba(0, 0, 0, .1) 100%);
-        background:         linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, .1) 100%);
+        background: -webkit-linear-gradient(top, transparent 10%, rgba(0, 0, 0, .05) 100%);
+        background:         linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, .05) 100%);
     }
     .fix-remont .page-header .cards__item img
     {
-        display: block; 
+        display: block;
 
         max-width: 100%;
         height: auto;
+
+        -webkit-animation: enterRight .6s ease-out 1 both;
+                animation: enterRight .6s ease-out 1 both;
+    }
+    .fix-remont .page-header .cards__item:nth-child(1) img
+    {
+        -webkit-animation-delay: 300ms;
+                animation-delay: 300ms;
+    }
+    .fix-remont .page-header .cards__item:nth-child(2) img
+    {
+        -webkit-animation-delay: 350ms;
+                animation-delay: 350ms;
+    }
+    .fix-remont .page-header .cards__item:nth-child(3) img
+    {
+        -webkit-animation-delay: 425ms;
+                animation-delay: 425ms;
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .fix-remont .page-header
+    {
+        min-height: 700px;
+    }
+    .fix-remont .page-header .container
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        min-height: 700px; 
+
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .fix-remont .page-header .main-title
+    {
+        margin: 0;
+    }
+    .fix-remont .page-header .promo.cards
+    {
+        bottom: auto;
+        left: calc(58.333% + 20px);
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .fix-remont .page-header .promo.cards
+    {
+        left: calc(50% + 20px);
     }
 }

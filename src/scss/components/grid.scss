@@ -6,3 +6,11 @@
 	padding: 0 6.5vw;
 	position: relative;
 }
+
+
+
+@media ($min-lg) {
+	.container {
+		padding: 0 calc(8.33% + 20px);
+	}
+}
