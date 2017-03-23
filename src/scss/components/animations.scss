@@ -1,0 +1,28 @@
+@keyframes enterDown {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideInDown {
+	from {
+		transform: translateY(-20px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes headerBgIn {
+	from {
+		margin-top: -10vh;
+		background-position: center 10vh;
+	}
+	to {
+		margin-top: 0;
+		background-position: center center;
+	}
+}

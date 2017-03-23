@@ -506,3 +506,222 @@ template
 {
     display: none;
 }
+
+html
+{
+    font-family: 'Muller', 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+    min-width: 375px;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+.frame
+{
+    display: block; 
+    overflow: hidden;
+}
+
+.main-title
+{
+    font-size: 2.827rem;
+    font-weight: 800;
+    line-height: 1.4;
+
+    margin: 1em 0 .5em; 
+
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+    color: #fff;
+}
+.main-title .main-title__desc
+{
+    font-size: 1.312rem;
+    font-weight: 400;
+    line-height: 1.5;
+
+    display: block;
+
+    letter-spacing: normal; 
+    text-transform: none;
+}
+
+.title
+{
+    font-size: 1.999rem;
+    line-height: 1.4;
+
+    margin: 1em 0 .6em;
+}
+
+.page-header
+{
+    overflow: hidden;
+
+    box-sizing: border-box;
+    min-height: 70vh;
+    margin-bottom: 10vh; 
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.page-header .m18-logo
+{
+    position: absolute;
+
+    width: 85px;
+    height: 51px;
+    margin: 40px 0 0 25px;
+
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .3s ease-in;
+            transition: -webkit-transform .3s ease-in;
+            transition:         transform .3s ease-in;
+            transition:         transform .3s ease-in, -webkit-transform .3s ease-in;
+}
+.page-header .m18-logo:hover
+{
+    -webkit-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+}
+
+.container
+{
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 375px;
+    padding: 0 25px;
+}
+
+@-webkit-keyframes enterDown
+{
+    from
+    {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+    to
+    {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@keyframes enterDown
+{
+    from
+    {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+    to
+    {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes slideInDown
+{
+    from
+    {
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
+    }
+    to
+    {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown
+{
+    from
+    {
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
+    }
+    to
+    {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes headerBgIn
+{
+    from
+    {
+        margin-top: -10vh;
+
+        background-position: center 10vh;
+    }
+    to
+    {
+        margin-top: 0;
+
+        background-position: center center;
+    }
+}
+
+@keyframes headerBgIn
+{
+    from
+    {
+        margin-top: -10vh;
+
+        background-position: center 10vh;
+    }
+    to
+    {
+        margin-top: 0;
+
+        background-position: center center;
+    }
+}
+
+.fix-remont .page-header
+{
+    -webkit-animation: headerBgIn .6s ease-out 1 none;
+            animation: headerBgIn .6s ease-out 1 none; 
+
+    background-image: url(../img/cover--sm.jpg);
+}
+.fix-remont .page-header .promo.cards
+{
+    display: none;
+}
+.fix-remont .page-header .main-title
+{
+    margin-top: 24vh;
+
+    -webkit-animation: slideInDown .8s ease-out 1 both;
+            animation: slideInDown .8s ease-out 1 both;
+}
+.fix-remont .page-header .frame > span
+{
+    position: relative;
+
+    display: block;
+
+    -webkit-animation: enterDown .8s ease-out 1 both;
+            animation: enterDown .8s ease-out 1 both;
+}
+.fix-remont .page-header .frame > span:nth-child(1)
+{
+    -webkit-animation-delay: .2s;
+            animation-delay: .2s;
+}
+.fix-remont .page-header .frame > span:nth-child(2)
+{
+    -webkit-animation-delay: .3s;
+            animation-delay: .3s;
+}

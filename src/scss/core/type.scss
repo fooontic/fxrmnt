@@ -1,0 +1,26 @@
+.main-title {
+	font-size: $fz-h1;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 1.4;
+	color: #fff;
+	letter-spacing: .05em;
+	margin: 1em 0 .5em;
+
+	& .main-title__desc {
+		display: block;
+		font-size: $fz-intro;
+		text-transform: none;
+		line-height: $lh;
+		font-weight: 400;
+		letter-spacing: normal;
+	}
+
+}
+
+
+.title {
+	font-size: $fz-h2;
+	line-height: 1.4;
+	margin: 1em 0 .6em;
+}

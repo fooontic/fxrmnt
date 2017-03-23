@@ -1,0 +1,28 @@
+.fix-remont {
+
+
+
+	.page-header {
+		background-image: url(../img/cover--sm.jpg);
+		animation: headerBgIn .6s ease-out 1 none;
+
+		& .promo.cards {
+			display: none;
+		}
+
+		& .main-title {
+			margin-top: 24vh;
+			animation: slideInDown .8s ease-out 1 both;
+		}
+
+		& .frame > span {
+			position: relative;
+			display: block;
+			animation: enterDown .8s ease-out 1 both;
+
+			&:nth-child(1) {animation-delay: .2s;}
+			&:nth-child(2) {animation-delay: .3s;}
+		}
+	}
+
+}
