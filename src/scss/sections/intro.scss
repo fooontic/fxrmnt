@@ -1,4 +1,40 @@
 .intro {
 
+	.design-page {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		box-sizing: border-box;
+		margin-bottom: 10vh;
+		box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .3);
+		margin-left: -6.5vw;
+		margin-right: -6.5vw;
+
+		&__img img {
+			@include img-fluid();
+			width: 100%;
+		}
+	}
+
+
+	@media ($min-md) {
+		.design-page {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+
+			// &__img:nth-child(1) {	animation: slideInUp 1s .2s ease-out  1 both;}
+			// &__img:nth-child(2) {	animation: slideInUp 1s .5s ease-out  1 both;}
+			// &__img:nth-child(3) {	animation: slideInUp 1s .8s ease-out  1 both;}
+
+		}
+	}
+
+
+	@media ($min-lg) {
+		.design-page {
+			margin-bottom: 18vh;
+		}
+	}
 
 }

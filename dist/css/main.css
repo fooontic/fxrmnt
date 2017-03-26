@@ -734,6 +734,34 @@ html
     }
 }
 
+@-webkit-keyframes slideInUp
+{
+    from
+    {
+        -webkit-transform: translateY(100%);
+                transform: translateY(100%);
+    }
+    to
+    {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp
+{
+    from
+    {
+        -webkit-transform: translateY(100%);
+                transform: translateY(100%);
+    }
+    to
+    {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
 @-webkit-keyframes headerBgIn
 {
     from
@@ -1011,5 +1039,53 @@ html
     .fix-remont .page-header .promo.cards
     {
         left: calc(50% + 20px);
+    }
+}
+
+.fix-remont .intro .design-page
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    box-sizing: border-box;
+    margin-right: -6.5vw; 
+    margin-bottom: 10vh;
+    margin-left: -6.5vw;
+
+    box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .3);
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.fix-remont .intro .design-page__img img
+{
+    display: block;
+
+    width: 100%; 
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px)
+{
+    .fix-remont .intro .design-page
+    {
+        width: 100%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .fix-remont .intro .design-page
+    {
+        margin-bottom: 18vh;
     }
 }
