@@ -1089,3 +1089,58 @@ html
         margin-bottom: 18vh;
     }
 }
+
+.fix-remont .calculator
+{
+    overflow: hidden;
+}
+.fix-remont .calculator .ruler__inner
+{
+    position: relative;
+    z-index: 100;
+
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 50vh; 
+
+    background-image: url(../img/ruler-cm.gif);
+    background-repeat: repeat-x;
+    background-position-x: 0;
+}
+.fix-remont .calculator .ruler__inner::before,
+.fix-remont .calculator .ruler__inner::after
+{
+    position: absolute;
+    top: 0; 
+
+    display: block;
+
+    width: 150vw;
+    height: 100%;
+
+    content: '';
+
+    background-image: url(../img/ruler-cm.gif);
+    background-repeat: repeat-x;
+}
+.fix-remont .calculator .ruler__inner::before
+{
+    right: 100%;
+
+    background-position-x: 100%;
+}
+.fix-remont .calculator .ruler__inner::after
+{
+    z-index: -1;
+    left: 0;
+
+    background-position-x: 0;
+}
+.fix-remont .calculator .ruler .ruler-gif,
+.fix-remont .calculator .ruler .ruler-info
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}

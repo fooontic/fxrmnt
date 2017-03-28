@@ -1,0 +1,50 @@
+.calculator {
+	overflow: hidden;
+
+
+	& .ruler {
+		// background-image: url(../img/ruler-cm.gif);
+		// background-repeat: repeat-x;
+
+		&__inner {
+			max-width: 1440px;
+			box-sizing: border-box;
+			margin: 0 auto;
+			background-image: url(../img/ruler-cm.gif);
+			background-repeat: repeat-x;
+			position: relative;
+			z-index: 100;
+			background-position-x: 0;
+			margin-bottom: 50vh;
+
+			&::before, &::after {
+				content: '';
+				display: block;
+				position: absolute;
+				height: 100%;
+				width: 150vw;
+				background-image: url(../img/ruler-cm.gif);
+				background-repeat: repeat-x;
+				top: 0;
+			}
+
+			&::before {
+				right: 100%;
+				background-position-x: 100%;
+			}
+
+			&::after {
+				left: 0;
+				z-index: -1;
+				background-position-x: 0;
+			}
+		}
+
+		.ruler-gif, .ruler-info {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+
+	}
+}
