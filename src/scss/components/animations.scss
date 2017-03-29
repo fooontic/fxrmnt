@@ -57,3 +57,23 @@
 		box-shadow: 0 20px 60px -10px rgba(0,0,0,.4);
 	}
 }
+
+
+@keyframes rulerAppear {
+	from {
+		left: 150vw;
+	} to {
+		left: 0;
+	}
+}
+
+
+@keyframes fadeInDown {
+	from {
+		transform: translateY(-50%);
+		opacity: 0;
+	} to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

@@ -1,14 +1,17 @@
 .case {
 	box-sizing: border-box;
+	position: relative;
 	margin-bottom: 10vh;
 	box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .3);
 	margin-left: -6.5vw;
 	margin-right: -6.5vw;
 
-	&__img img {
+	&__img img, &__video video {
 		@include img-fluid();
 		width: 100%;
 	}
+
+
 }
 
 

@@ -46,19 +46,29 @@
     </section>
     <section class="calculator">
       <div class="container">
-        <h2 class="title">Ремонт — это легко!</h2>
-        <p class="flow">«Fix Ремонт» качественно и&nbsp;эффективно решает комплекс задач, связанных с&nbsp;ремонтом квартиры. Перед нами стояла задача спроектировать сервис, отличающий его среди конкурирующих студий выполняющих «ремонт под ключ».»</p>
+        <h2 class="title">Калькулятор</h2>
+        <p class="flow">Помимо выбора подходящего стиля отделки, есть возможность включить дополнительные опции. Гибкая разработчка калькулятора позволяет выбрать необходимые клиенту опции, указать общую площадь квартиры с мгновенным пересчётом стоимости ремонта.</p>
       </div>
       <div class="ruler">
-        <div class="ruler__inner" data-bottom="left:100vw;" data-center-center="left: 0;">
+        <div class="ruler__inner wow rulerAppear">
           <div class="ruler-gif"><img src="img/ruler.gif" alt="Линейка выбора площади"></div>
-          <div class="ruler-info" data-center-top="opacity: 0; transform: translateY(-50%);" data-center-center="opacity: 1; transform: translateY(0);"><img src="img/calc-info.png" alt="Линейка выбора площади"></div>
+          <div class="ruler-info"><img src="img/calc-info.png" alt="Линейка выбора площади"></div>
         </div>
+      </div>
+      <div class="container">
+        <div class="case">
+          <div class="case__video"> <video autoplay loop muted>
+              <source src="video/calc.webm" type="video/webm">
+              <source src="video/calc.mp4" type="video/mp4">
+            </video> </div>
+        </div>
+        <div class="plant"><img src="img/plant.png"></div>
       </div>
     </section>
   </main>
   <script src="js/main.js"></script>
   <script>
     var s = skrollr.init();
+    new WOW().init();
   </script>
 </body>

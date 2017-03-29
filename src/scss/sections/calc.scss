@@ -5,6 +5,9 @@
 	& .ruler {
 		// background-image: url(../img/ruler-cm.gif);
 		// background-repeat: repeat-x;
+		height: 50vw;
+		max-height: 481px;
+		margin-bottom: 10vh;
 
 		&__inner {
 			max-width: 1440px;
@@ -15,36 +18,129 @@
 			position: relative;
 			z-index: 100;
 			background-position-x: 0;
-			margin-bottom: 50vh;
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
 
 			&::before, &::after {
 				content: '';
 				display: block;
 				position: absolute;
 				height: 100%;
-				width: 150vw;
+				width: 200vw;
 				background-image: url(../img/ruler-cm.gif);
 				background-repeat: repeat-x;
+				background-size: contain;
 				top: 0;
 			}
 
 			&::before {
 				right: 100%;
-				background-position-x: 100%;
+				background-position: top right;
 			}
 
 			&::after {
 				left: 0;
 				z-index: -1;
-				background-position-x: 0;
+				background-position: top left;
 			}
 		}
 
-		.ruler-gif, .ruler-info {
-			display: inline-block;
-			vertical-align: middle;
+		&-info img, &-gif img {
+			@include img-fluid();
 		}
 
+		&-info {
+			display: none;
+		}
+	}
 
+	.plant {
+		display: none;
+		transition: right .4s ease;
+	}
+}
+
+
+
+
+
+@media ($min-md) {
+	.calculator {
+		.ruler {
+			margin-bottom: 12vh;
+
+			&__inner {
+				padding-right: 6.5vw;
+			}
+
+			&-info {
+				display: block;
+			}
+
+			&__inner.rulerAppear {
+				visibility: visible !important;
+				animation: rulerAppear 1s .2s cubic-bezier(0.18, 0.89, 0.32, 1.28) 1 both;
+				animation-play-state: paused;
+			}
+
+			&__inner.rulerAppear.animated {
+				animation-play-state: running;
+			}
+
+			&-info {
+				animation: fadeInDown .4s .2s ease-out 1 both;
+				animation-play-state: running;
+			}
+		}
+
+		.plant {
+			display: block;
+			position: absolute;
+			width: 16vw;
+			height: auto;
+			max-width: 198px;
+			right: -6%;
+			bottom: -10%;
+
+			& img {
+				@include img-fluid();
+			}
+		}
+	}
+}
+
+@media ($min-lg) {
+	.calculator {
+
+		.plant {
+			width: 14vw;
+			right: -2%;
+		}
+	}
+}
+
+@media ($min-xl) {
+	.calculator{
+		.ruler{
+			&__inner{
+				&::before, &::after{
+					background-size: auto;
+				}
+			}
+		}
+
+		.plant {
+			right: -1vw;
+		}
+	}
+}
+
+
+@media (min-width: 1600px) {
+	.calculator {
+		.plant {
+			right: 0;
+		}
 	}
 }
