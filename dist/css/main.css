@@ -1324,3 +1324,29 @@ html
         right: 0;
     }
 }
+
+@media (min-width: 768px)
+{
+    .fix-remont .components .case:before
+    {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+
+        width: 100vw;
+        height: calc(100% - 20vh);
+        margin: 10vh -0;
+
+        content: '';
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%); 
+
+        background-image: url(../img/admin-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
