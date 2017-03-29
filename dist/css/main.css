@@ -1159,7 +1159,6 @@ html
 }
 .fix-remont .calculator .ruler
 {
-    height: 50vw;
     max-height: 481px;
     margin-bottom: 10vh;
 }
@@ -1325,8 +1324,17 @@ html
     }
 }
 
+.fix-remont .components
+{
+    margin-bottom: 10vh;
+}
+
 @media (min-width: 768px)
 {
+    .fix-remont .components
+    {
+        margin-bottom: 14vh;
+    }
     .fix-remont .components .case:before
     {
         position: absolute;
@@ -1348,5 +1356,66 @@ html
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+}
+
+.fix-remont .responsive
+{
+    overflow: hidden;
+}
+.fix-remont .responsive__screens
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    margin: 0 -1vw; 
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.fix-remont .responsive__screens-item
+{
+    box-sizing: border-box;
+    max-width: 33%;
+    margin-bottom: 2vw; 
+    padding: 0 1vw;
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 33%;
+        flex: 1 1 33%;
+}
+.fix-remont .responsive__screens-item:nth-child(4)
+{
+    max-width: 50%;
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 50%;
+        flex: 1 1 50%;
+}
+.fix-remont .responsive__screens-item img
+{
+    display: block;
+
+    width: 100%; 
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px)
+{
+    .fix-remont .responsive__screens
+    {
+        width: 170%; 
+
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
     }
 }

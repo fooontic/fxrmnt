@@ -1,0 +1,40 @@
+.responsive {
+	overflow: hidden;
+
+	&__screens {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		margin: 0 -1vw;
+	}
+
+	&__screens-item {
+		max-width: 33%;
+		flex: 1 1 33%;
+		box-sizing: border-box;
+		padding: 0 1vw;
+		margin-bottom: 2vw;
+
+		&:nth-child(4) {
+			max-width: 50%;
+			flex: 1 1 50%;
+		}
+
+		& img {
+			@include img-fluid();
+			width: 100%;
+		}
+	}
+
+}
+
+
+@media ($min-md) {
+	.responsive {
+
+		&__screens {
+			flex-flow: row nowrap;
+			width: 170%;
+		}
+	}
+}

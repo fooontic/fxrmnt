@@ -1,11 +1,12 @@
 .components {
 
-
+	margin-bottom: 10vh;
 }
 
 @media ($min-md) {
 	.components {
-
+		margin-bottom: 14vh;
+		
 		& .case {
 
 			&:before {
