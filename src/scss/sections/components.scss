@@ -1,12 +1,14 @@
 .components {
 
 	margin-bottom: 10vh;
+	overflow: hidden;
 }
 
 @media ($min-md) {
 	.components {
 		margin-bottom: 14vh;
-		
+
+
 		& .case {
 
 			&:before {

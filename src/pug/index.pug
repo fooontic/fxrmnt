@@ -105,7 +105,7 @@ body.fix-remont
 					h2.title Адаптивная версия
 					p.flow Сайт был адаптирован под различные экраны устройств. Пользователь может комфортно использовать сервис, как со&nbsp;стационарного компьютера, так и&nbsp;с&nbsp;телефона или планшета.
 
-					.responsive__screens
+					.responsive__screens(data-bottom-top="left[swing]: 0%" data-top-bottom="left[swing]: -66%")
 						.responsive__screens-item
 							img(src="img/mobile-1.png" alt="Мобильная версия главной страницы")
 						.responsive__screens-item
@@ -116,7 +116,8 @@ body.fix-remont
 							img(src="img/mobile-4.png" alt="Планшетная версия страницы дизайн-проекта")
 						.responsive__screens-item
 							img(src="img/mobile-5.png" alt="Мобильная версия меню сайта")
-
+			
+			section.spacer
 
 
 
@@ -129,9 +130,11 @@ body.fix-remont
 		if (Modernizr.touchevents) {
 			console.log('touch')
 		} else {
-			var s = skrollr.init({
-				skrollrBody:'skrollr-body'
-			})
+			window.onload = function() {
+				var s = skrollr.init({
+					skrollrBody:'skrollr-body'
+				})
+			}
 		}
 
 		new WOW().init();

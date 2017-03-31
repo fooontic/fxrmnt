@@ -6,6 +6,7 @@
 		flex-flow: row wrap;
 		justify-content: flex-start;
 		margin: 0 -1vw;
+		transition: left .2s ease-out;
 	}
 
 	&__screens-item {
@@ -15,6 +16,7 @@
 		padding: 0 1vw;
 		margin-bottom: 2vw;
 		max-height: 653px;
+		transition: margin-right .1s ease-out;
 
 		&:nth-child(4) {
 			max-width: 50%;
@@ -35,11 +37,18 @@
 
 		&__screens {
 			flex-flow: row nowrap;
-			width: 170%;
+			width: 300vw;
+			position: relative;
 		}
 
 		&__screens-item {
-			// max-width: none;
+			max-width: none;
+			flex: initial;
+
+			&:nth-child(4) {
+				max-width: none;
+				flex: initial;
+			}
 		}
 	}
 }

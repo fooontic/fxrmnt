@@ -1326,6 +1326,8 @@ html
 
 .fix-remont .components
 {
+    overflow: hidden; 
+
     margin-bottom: 10vh;
 }
 
@@ -1369,7 +1371,10 @@ html
     display: -ms-flexbox;
     display: flex;
 
-    margin: 0 -1vw; 
+    margin: 0 -1vw;
+
+    -webkit-transition: left .2s ease-out;
+            transition: left .2s ease-out; 
 
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1383,9 +1388,12 @@ html
 {
     box-sizing: border-box;
     max-width: 33%;
-    max-height: 653px; 
+    max-height: 653px;
     margin-bottom: 2vw;
     padding: 0 1vw;
+
+    -webkit-transition: margin-right .1s ease-out;
+            transition: margin-right .1s ease-out; 
 
     -webkit-box-flex: 1;
     -ms-flex: 1 1 33%;
@@ -1412,11 +1420,34 @@ html
 {
     .fix-remont .responsive__screens
     {
-        width: 170%; 
+        position: relative; 
+
+        width: 300vw;
 
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
     }
+    .fix-remont .responsive__screens-item
+    {
+        max-width: none;
+
+        -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    }
+    .fix-remont .responsive__screens-item:nth-child(4)
+    {
+        max-width: none;
+
+        -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    }
+}
+
+.spacer
+{
+    height: 50vw;
 }

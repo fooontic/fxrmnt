@@ -83,7 +83,8 @@
         <div class="container">
           <h2 class="title">Адаптивная версия</h2>
           <p class="flow">Сайт был адаптирован под различные экраны устройств. Пользователь может комфортно использовать сервис, как со&nbsp;стационарного компьютера, так и&nbsp;с&nbsp;телефона или планшета.</p>
-          <div class="responsive__screens">
+          <div class="responsive__screens" data-bottom-top="left[swing]: 0%"
+            data-top-bottom="left[swing]: -66%">
             <div class="responsive__screens-item"><img src="img/mobile-1.png" alt="Мобильная версия главной страницы"></div>
             <div class="responsive__screens-item"><img src="img/mobile-2.png" alt="Мобильная версия страницы дизайн-проектов"></div>
             <div class="responsive__screens-item"><img src="img/mobile-3.png" alt="Мобильная версия страницы калькулятора"></div>
@@ -92,6 +93,7 @@
           </div>
         </div>
       </section>
+      <section class="spacer"></section>
     </main>
   </div>
   <script src="js/main.js"></script>
@@ -105,10 +107,13 @@
     }
     else
     {
-      var s = skrollr.init(
+      window.onload = function()
       {
-        skrollrBody: 'skrollr-body'
-      })
+        var s = skrollr.init(
+        {
+          skrollrBody: 'skrollr-body'
+        })
+      }
     }
     new WOW().init();
   </script>
