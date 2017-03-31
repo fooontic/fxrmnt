@@ -9,118 +9,129 @@ head
 
 
 body.fix-remont
-	header.page-header
+	#skrollr-body
+		header.page-header
 
-		a.m18-logo(href="/works/")
-			img(src="img/m18.svg", alt="M18 logo")
-
-		.container
-			h1.main-title
-				span.frame
-					span Fix Remont
-				span.frame
-					span.main-title__desc Разработка сайта для проекта студии братьев Жилиных
-
-			.promo.cards
-				.cards__item
-					img(src="img/promo-card-1.png", alt="Карточка выбора интерьера")
-				.cards__item
-					img(src="img/promo-card-2.png", alt="Карточка выбора интерьера")
-				.cards__item
-					img(src="img/promo-card-3.png", alt="Карточка выбора интерьера")
-
-	main
-		section.intro
-			.container
-
-				h2.title Ремонт — это легко!
-				p.flow «Fix Ремонт» качественно и&nbsp;эффективно решает комплекс задач, связанных с&nbsp;ремонтом квартиры. Перед нами стояла задача спроектировать сервис, отличающий его среди конкурирующих студий выполняющих «ремонт под ключ».»
-
-				.case
-					picture.case__img
-						source(media="(min-width: 320px) and (max-width: 767px)" srcset="img/main-page--sm.jpg" alt="Главная страница сайта Fix Remont")
-						source(media="(min-width: 767px) and (max-width: 1023px)" srcset="img/main-page--md.jpg" alt="Главная страница сайта Fix Remont")
-						source(srcset="img/main-page.jpg" media="(min-width: 1024px)" alt="Главная страница сайта Fix Remont")
-						img(srcset="img/main-page.jpg", alt="Главная страница сайта Fix Remont")
-
-				.design-page(data-center-center="box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .0);" data-center-bottom="box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .3);")
-					picture.design-page__img(data-bottom-top="transform: translateY(50%);" data-center-center="transform: translateY(0);")
-						source(srcset="img/designs-1.jpg" media="(min-width: 1024px)" alt="Вариант дизайна в скандинавском стиле")
-						img(srcset="img/designs-1.jpg", alt="Вариант дизайна в скандинавском стиле")
-					picture.design-page__img(data-bottom-top="transform: translateY(100%);" data-center-center="transform: translateY(0);")
-						source(srcset="img/designs-2.jpg" media="(min-width: 1024px)" alt="Вариант дизайна в скандинавском стиле")
-						img(srcset="img/designs-2.jpg", alt="Вариант дизайна в скандинавском стиле")
-					picture.design-page__img(data-bottom-top="transform: translateY(200%);" data-center-center="transform: translateY(0);")
-						source(srcset="img/designs-3.jpg" media="(min-width: 1024px)" alt="Вариант дизайна в скандинавском стиле")
-						img(srcset="img/designs-3.jpg", alt="Вариант дизайна в скандинавском стиле")
-
-		section.calculator
+			a.m18-logo(href="/works/")
+				img(src="img/m18.svg", alt="M18 logo")
 
 			.container
-				h2.title Калькулятор
-				p.flow Помимо выбора подходящего стиля отделки, есть возможность включить дополнительные опции. Гибкая разработчка калькулятора позволяет выбрать необходимые клиенту опции, указать общую площадь квартиры с&nbsp;мгновенным пересчётом стоимости ремонта.
+				h1.main-title
+					span.frame
+						span Fix Remont
+					span.frame
+						span.main-title__desc Разработка сайта для проекта студии братьев Жилиных
 
-			.ruler
-				//- .ruler__inner(data-bottom="left:100vw;" data-center-center="left: 0;")
-				//- 	.ruler-gif
-				//- 		img(src="img/ruler.gif", alt="Линейка выбора площади")
-				//- 	.ruler-info(data-center-top="opacity: 0; transform: translateY(-50%);" data-center-center="opacity: 1; transform: translateY(0);")
-				//- 		img(src="img/calc-info.png", alt="Линейка выбора площади")
-							
-				.ruler__inner.wow.rulerAppear
-					.ruler-gif
-						img(src="img/ruler.gif", alt="Линейка выбора площади")
-					.ruler-info
-						img(src="img/calc-info.png", alt="Линейка выбора площади")
-			
-			.container
-				.case
-					.case__video
-						video(autoplay loop muted)
-							source(src="video/calc.webm" type="video/webm")
-							source(src="video/calc.mp4" type="video/mp4")
-				.plant
-					img(src="img/plant.png")
-						
-						
-						
-		section.components
-			
-			.container
-				h2.title Компонентная структура
-				p.flow Весь сайт состоит из&nbsp;взаимозаменяемых компонентов. Компонентом может считать изображение с&nbsp;описанием, текстовый блок, выбор типа отделки и&nbsp;т.д. Такой подход позволяет собирать сайт как «конструктор», создавать новые страницы и&nbsp;менять блоки местами без ущерба визуальной составлябщей, через собственную систему администрирования сайта.
-					
-				.case
-					.case__video
-						video(autoplay loop muted)
-							source(src="video/admin.webm" type="video/webm")
-							source(src="video/admin.mp4" type="video/mp4")
-								
-		
-		
-		section.responsive
-			
-			.container 
-				h2.title Адаптивная версия
-				p.flow Сайт был адаптирован под различные экраны устройств. Пользователь может комфортно использовать сервис, как со&nbsp;стационарного компьютера, так и&nbsp;с&nbsp;телефона или планшета.
-				
-				.responsive__screens
-					.responsive__screens-item
-						img(src="http://placehold.it/300x500" alt="")
-					.responsive__screens-item
-						img(src="http://placehold.it/300x500" alt="")
-					.responsive__screens-item
-						img(src="http://placehold.it/300x500" alt="")
-					.responsive__screens-item
-						img(src="http://placehold.it/300x450" alt="")
-					.responsive__screens-item
-						img(src="http://placehold.it/300x500" alt="")
-							
-		
+				.promo.cards
+					.cards__item
+						img(src="img/promo-card-1.png", alt="Карточка выбора интерьера")
+					.cards__item
+						img(src="img/promo-card-2.png", alt="Карточка выбора интерьера")
+					.cards__item
+						img(src="img/promo-card-3.png", alt="Карточка выбора интерьера")
+
+		main
+			section.intro
+				.container
+
+					h2.title Ремонт — это легко!
+					p.flow «Fix Ремонт» качественно и&nbsp;эффективно решает комплекс задач, связанных с&nbsp;ремонтом квартиры. Перед нами стояла задача спроектировать сервис, отличающий его среди конкурирующих студий выполняющих «ремонт под ключ».
+
+					.case
+						picture.case__img
+							source(media="(min-width: 320px) and (max-width: 767px)" srcset="img/main-page--sm.jpg" alt="Главная страница сайта Fix Remont")
+							source(media="(min-width: 767px) and (max-width: 1023px)" srcset="img/main-page--md.jpg" alt="Главная страница сайта Fix Remont")
+							source(srcset="img/main-page.jpg" media="(min-width: 1024px)" alt="Главная страница сайта Fix Remont")
+							img(srcset="img/main-page.jpg", alt="Главная страница сайта Fix Remont")
+
+					.design-page(data-center-center="box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .0);" data-center-bottom="box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .3);")
+						picture.design-page__img(data-bottom-top="transform: translateY(50%);" data-center-center="transform: translateY(0);")
+							source(srcset="img/designs-1.jpg" media="(min-width: 1024px)" alt="Вариант дизайна в скандинавском стиле")
+							img(srcset="img/designs-1.jpg", alt="Вариант дизайна в скандинавском стиле")
+						picture.design-page__img(data-bottom-top="transform: translateY(100%);" data-center-center="transform: translateY(0);")
+							source(srcset="img/designs-2.jpg" media="(min-width: 1024px)" alt="Вариант дизайна в скандинавском стиле")
+							img(srcset="img/designs-2.jpg", alt="Вариант дизайна в скандинавском стиле")
+						picture.design-page__img(data-bottom-top="transform: translateY(200%);" data-center-center="transform: translateY(0);")
+							source(srcset="img/designs-3.jpg" media="(min-width: 1024px)" alt="Вариант дизайна в скандинавском стиле")
+							img(srcset="img/designs-3.jpg", alt="Вариант дизайна в скандинавском стиле")
+
+			section.calculator
+
+				.container
+					h2.title Калькулятор
+					p.flow Помимо выбора подходящего стиля отделки, есть возможность включить дополнительные опции. Гибкая разработчка калькулятора позволяет выбрать необходимые клиенту опции, указать общую площадь квартиры с&nbsp;мгновенным пересчётом стоимости ремонта.
+
+				.ruler
+					//- .ruler__inner(data-bottom="left:100vw;" data-center-center="left: 0;")
+					//- 	.ruler-gif
+					//- 		img(src="img/ruler.gif", alt="Линейка выбора площади")
+					//- 	.ruler-info(data-center-top="opacity: 0; transform: translateY(-50%);" data-center-center="opacity: 1; transform: translateY(0);")
+					//- 		img(src="img/calc-info.png", alt="Линейка выбора площади")
+
+					.ruler__inner.wow.rulerAppear
+						.ruler-gif
+							img(src="img/ruler.gif", alt="Линейка выбора площади")
+						.ruler-info
+							img(src="img/calc-info.png", alt="Линейка выбора площади")
+
+				.container
+					.case
+						.case__video
+							video(autoplay loop muted)
+								source(src="video/calc.webm" type="video/webm")
+								source(src="video/calc.mp4" type="video/mp4")
+					.plant
+						img(src="img/plant.png")
+
+
+
+			section.components
+
+				.container
+					h2.title Компонентная структура
+					p.flow Весь сайт состоит из&nbsp;взаимозаменяемых компонентов. Компонентом может считать изображение с&nbsp;описанием, текстовый блок, выбор типа отделки и&nbsp;т.д. Такой подход позволяет собирать сайт как «конструктор», создавать новые страницы и&nbsp;менять блоки местами без ущерба визуальной составлябщей, через собственную систему администрирования сайта.
+
+					.case
+						.case__video
+							video(autoplay loop muted)
+								source(src="video/admin.webm" type="video/webm")
+								source(src="video/admin.mp4" type="video/mp4")
+
+
+
+			section.responsive
+
+				.container
+					h2.title Адаптивная версия
+					p.flow Сайт был адаптирован под различные экраны устройств. Пользователь может комфортно использовать сервис, как со&nbsp;стационарного компьютера, так и&nbsp;с&nbsp;телефона или планшета.
+
+					.responsive__screens
+						.responsive__screens-item
+							img(src="img/mobile-1.png" alt="Мобильная версия главной страницы")
+						.responsive__screens-item
+							img(src="img/mobile-2.png" alt="Мобильная версия страницы дизайн-проектов")
+						.responsive__screens-item
+							img(src="img/mobile-3.png" alt="Мобильная версия страницы калькулятора")
+						.responsive__screens-item
+							img(src="img/mobile-4.png" alt="Планшетная версия страницы дизайн-проекта")
+						.responsive__screens-item
+							img(src="img/mobile-5.png" alt="Мобильная версия меню сайта")
+
+
 
 
 	script(src="js/main.js")
 	script.
-		var s = skrollr.init();
+		//- document.ready var s = skrollr.init({
+		//- 	skrollrBody:'skrollr-body'
+		//- });
 		
+		if (Modernizr.touchevents) {
+			console.log('touch')
+		} else {
+			var s = skrollr.init({
+				skrollrBody:'skrollr-body'
+			})
+		}
+
 		new WOW().init();

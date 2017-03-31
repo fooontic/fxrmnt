@@ -14,15 +14,16 @@
 		box-sizing: border-box;
 		padding: 0 1vw;
 		margin-bottom: 2vw;
+		max-height: 653px;
 
 		&:nth-child(4) {
 			max-width: 50%;
 			flex: 1 1 50%;
+			max-height: 774px;
 		}
 
 		& img {
 			@include img-fluid();
-			width: 100%;
 		}
 	}
 
@@ -35,6 +36,10 @@
 		&__screens {
 			flex-flow: row nowrap;
 			width: 170%;
+		}
+
+		&__screens-item {
+			// max-width: none;
 		}
 	}
 }
