@@ -1,3 +1,4 @@
+@charset 'UTF-8';
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -532,6 +533,11 @@ html
     }
 }
 
+.spacer
+{
+    height: 50vw;
+}
+
 .main-title
 {
     font-size: 2.875rem;
@@ -564,6 +570,14 @@ html
     line-height: 1.4;
 
     max-width: 800px; 
+    margin: 1em auto .5em;
+}
+
+.title-sm
+{
+    font-size: 1.414rem;
+    line-height: 1.4;
+
     margin: 1em auto .5em;
 }
 
@@ -914,6 +928,162 @@ html
     .case
     {
         margin-bottom: 18vh;
+    }
+}
+
+.btn-sitelink
+{
+    font-size: 35px;
+    font-weight: bold;
+
+    position: relative;
+    left: 0;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin: 0 auto 2em;
+    padding: .2em 0 .2em;
+
+    -webkit-transition: padding .1s ease-out .7s, left .1s ease-out .7s;
+            transition: padding .1s ease-out .7s, left .1s ease-out .7s; 
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+    border-bottom: 4px solid;
+
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+            font-variant-ligatures: discretionary-ligatures;
+}
+.btn-sitelink::before,
+.btn-sitelink::after
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 4px;
+    height: 0;
+
+    content: '';
+    -webkit-transition: height .3s .4s;
+            transition: height .3s .4s; 
+
+    background-color: #fff;
+}
+.btn-sitelink::before
+{
+    left: 0;
+}
+.btn-sitelink::after
+{
+    right: 0;
+}
+.btn-sitelink span
+{
+    margin-right: .3em;
+}
+.btn-sitelink span::before,
+.btn-sitelink span::after
+{
+    position: absolute;
+    top: -4px;
+
+    width: 0;
+    height: 4px;
+
+    content: '';
+    -webkit-transition: width .3s cubic-bezier(.47, 0, .75, .72) .1s;
+            transition: width .3s cubic-bezier(.47, 0, .75, .72) .1s; 
+
+    background-color: #fff;
+}
+.btn-sitelink span::before
+{
+    left: 0;
+}
+.btn-sitelink span::after
+{
+    right: 0;
+}
+.btn-sitelink:hover,
+.btn-sitelink:active
+{
+    padding: .2em .8em .2em;
+
+    -webkit-transition: padding .2s, left .2s;
+            transition: padding .2s, left .2s;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+
+    outline: none;
+}
+.btn-sitelink:hover::before,
+.btn-sitelink:hover::after,
+.btn-sitelink:active::before,
+.btn-sitelink:active::after
+{
+    height: calc(100% + 4px);
+
+    -webkit-transition: height .3s .2s;
+            transition: height .3s .2s;
+}
+.btn-sitelink:hover span::before,
+.btn-sitelink:hover span::after,
+.btn-sitelink:active span::before,
+.btn-sitelink:active span::after
+{
+    width: 50%;
+
+    -webkit-transition: width .2s ease-out .5s;
+            transition: width .2s ease-out .5s;
+}
+.btn-sitelink:focus
+{
+    outline: none;
+}
+
+@media (max-width: 767px)
+{
+    .btn-sitelink svg
+    {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .btn-sitelink
+    {
+        font-size: 50px;
+
+        border-bottom: 6px solid;
+    }
+    .btn-sitelink::before,
+    .btn-sitelink::after
+    {
+        width: 6px;
+    }
+    .btn-sitelink span::before,
+    .btn-sitelink span::after
+    {
+        top: -6px; 
+
+        height: 6px;
+    }
+    .btn-sitelink:hover,
+    .btn-sitelink:active
+    {
+        left: -.8em;
+    }
+    .btn-sitelink:hover::before,
+    .btn-sitelink:hover::after,
+    .btn-sitelink:active::before,
+    .btn-sitelink:active::after
+    {
+        height: calc(100% + 6px);
     }
 }
 
@@ -1447,7 +1617,102 @@ html
     }
 }
 
-.spacer
+.fix-remont .credits
 {
-    height: 50vw;
+    text-align: left; 
+
+    color: #fff;
+}
+.fix-remont .credits-outer
+{
+    padding: 20vh 0 10vh;
+
+    -webkit-transition: background-position .3s ease-out;
+            transition: background-position .3s ease-out;
+    text-align: center; 
+
+    background-image: url(../img/credits-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+}
+.fix-remont .credits ul
+{
+    font-size: .875rem;
+
+    list-style-type: none;
+}
+.fix-remont .credits__dep-list
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    max-width: 440px; 
+    margin: 3em -15px 4em;
+    padding: 0;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.fix-remont .credits__dep-item
+{
+    box-sizing: border-box;
+    width: calc(50% - 15px);
+    padding: 0 15px; 
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 calc(50% - 15px);
+        flex: 1 1 calc(50% - 15px);
+}
+.fix-remont .credits__employee-list
+{
+    margin-top: .6em;
+    margin-bottom: 1.8em; 
+    padding: 0;
+}
+.fix-remont .credits__employee
+{
+    position: relative;
+
+    margin-bottom: .2em; 
+    padding-left: 1em;
+}
+.fix-remont .credits__employee::before
+{
+    position: absolute;
+    left: 0; 
+
+    content: '—';
+}
+.fix-remont .credits-outer .btn-sitelink
+{
+    margin-top: 2em;
+}
+
+@media (min-width: 768px)
+{
+    .fix-remont .credits-outer
+    {
+        text-align: left; 
+
+        background-position: 45% 100%;
+    }
+    .fix-remont .credits__dep-list
+    {
+        max-width: 520px;
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .fix-remont .credits-outer
+    {
+        background-position: bottom center;
+    }
 }

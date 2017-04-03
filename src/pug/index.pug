@@ -117,15 +117,44 @@ body.fix-remont
 						.responsive__screens-item
 							img(src="img/mobile-5.png" alt="Мобильная версия меню сайта")
 			
-			section.spacer
+			section.credits-outer
+				
+				.container
+					
+					a(href="http://fixremont.ru/").btn-sitelink 
+						span fixremont.ru
+						svg.external-link(width="36" height="36" viewBox="0 0 36 36")
+							g(fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="4" transform="translate(2 2)")
+								polyline(points="25 19 25 32 0 32 0 7 12.5 7")
+								path.arrowLine(pathLength="100" stroke-dasharray="100" stroke-dashoffset="0" d="M10,21 L32,0")
+								polyline.arrowEnd(points="19.2 0 32 0 32 12.8")
+					
+					.credits
+						h2.title-sm Над проектом работали
+						ul.credits__dep-list
+							li.credits__dep-item Арт-директор
+								ul.credits__employee-list
+									li.credits__employee Денис Шумов
+								
+							li.credits__dep-item Менеджер
+								ul.credits__employee-list
+									li.credits__employee Михаил Кучин
+							
+							li.credits__dep-item Дизайнеры
+								ul.credits__employee-list
+									li.credits__employee Александр Ратасеп
+									li.credits__employee Сергей Дюжев
+									
+							li.credits__dep-item Разработчики
+								ul.credits__employee-list
+									li.credits__employee Ася Скульская
+									li.credits__employee Алексей Вахрушев
+					
 
 
 
 	script(src="js/main.js")
 	script.
-		//- document.ready var s = skrollr.init({
-		//- 	skrollrBody:'skrollr-body'
-		//- });
 		
 		if (Modernizr.touchevents) {
 			console.log('touch')
