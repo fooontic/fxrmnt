@@ -619,10 +619,10 @@ html
     height: 51px;
 
     cursor: pointer;
-    -webkit-transition: -webkit-transform .3s ease-in;
-            transition: -webkit-transform .3s ease-in;
-            transition:         transform .3s ease-in;
-            transition:         transform .3s ease-in, -webkit-transform .3s ease-in;
+    -webkit-transition: left .3s ease-in, -webkit-transform .3s ease-in;
+            transition: left .3s ease-in, -webkit-transform .3s ease-in;
+            transition: transform .3s ease-in, left .3s ease-in;
+            transition: transform .3s ease-in, left .3s ease-in, -webkit-transform .3s ease-in;
 }
 .page-header .m18-logo:hover
 {
@@ -639,6 +639,10 @@ html
         min-height: 660px;
         max-height: 860px;
         margin-bottom: 18vh;
+    }
+    .page-header .m18-logo
+    {
+        left: 50px;
     }
 }
 
@@ -1095,6 +1099,9 @@ html
             animation: headerBgIn .6s ease-out 1 none;
 
     background-image: url(../img/cover--sm.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .fix-remont .page-header .promo.cards
 {
@@ -1138,6 +1145,7 @@ html
         min-height: 85vh;
 
         background-image: url(../img/cover.jpg);
+        background-position: center bottom;
     }
     .fix-remont .page-header .container
     {
@@ -1507,7 +1515,7 @@ html
     {
         margin-bottom: 14vh;
     }
-    .fix-remont .components .case:before
+    .fix-remont .components-bg
     {
         position: absolute;
         z-index: -1;
@@ -1519,7 +1527,6 @@ html
         height: calc(100% - 20vh);
         margin: 10vh -0;
 
-        content: '';
         -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
                 transform: translateX(-50%); 

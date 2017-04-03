@@ -1,5 +1,8 @@
 .page-header {
 	background-image: url(../img/cover--sm.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	animation: headerBgIn .6s ease-out 1 none;
 	position: relative;
 
@@ -33,6 +36,7 @@
 	.page-header {
 		min-height: 85vh;
 		background-image: url(../img/cover.jpg);
+		background-position: center bottom;
 
 		& .container { position: static;}
 

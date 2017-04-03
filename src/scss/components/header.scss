@@ -14,7 +14,7 @@
 		width: 85px;
 		height: 51px;
 		cursor: pointer;
-		transition: transform .3s ease-in;
+		transition: transform .3s ease-in, left .3s ease-in;
 
 		&:hover {
 			transform: scale(1.1, 1.1);
@@ -31,5 +31,9 @@
 		height: 80vmin;
 		max-height: 860px;
 		margin-bottom: 18vh;
+
+		& .m18-logo {
+			left: 50px;
+		}
 	}
 }
