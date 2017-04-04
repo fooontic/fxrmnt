@@ -1,0 +1,9 @@
+@mixin heading($size) {
+	font-size: $size;
+	margin: 1em auto .5em;
+	line-height: $lh-h1;
+}
+
+@mixin type-width {
+	max-width: 700px;
+}

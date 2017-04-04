@@ -22,14 +22,17 @@ $max-xl: 			'max-width:' + $screen-xl;
 /// fonts
 $font:		'Muller', 'Helvetica Neue', 'Arial', sans-serif;
 
+$fz-root:				18px;
+
 $fz: 			      1rem;
-$fz-h1:					2.875rem;
-$fz-h2:					1.999rem;
-$fz-h3:					1.414rem;
-$fz-sm:					0.875rem;
-$fz-intro:			1.312rem;
+$fz-h1:					4rem;
+$fz-h2:					1.556rem;
+$fz-h3:					1.167rem;
+$fz-sm:					0.778rem;
+$fz-intro:			1.333rem;
 
 $lh:						1.5;
+$lh-h1:					1.2;
 
 /// colors
 $text-color: 	#333333;

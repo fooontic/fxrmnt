@@ -1,10 +1,10 @@
 .main-title {
 	font-size: $fz-h1;
 	font-weight: 900;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	line-height: 1.4;
 	color: #fff;
-	letter-spacing: .04em;
+	// letter-spacing: .04em;
 	margin: 1em 0 .5em;
 	max-width: 500px;
 
@@ -12,7 +12,7 @@
 		display: block;
 		font-size: $fz-intro;
 		text-transform: none;
-		line-height: $lh;
+		line-height: $lh-h1;
 		font-weight: 400;
 		letter-spacing: normal;
 	}
@@ -21,22 +21,19 @@
 
 
 .title {
-	font-size: $fz-h2;
-	line-height: 1.4;
-	margin: 1em auto .5em;
-	max-width: 800px;
+	@include heading($fz-h2);
+	@include type-width();
 }
 
 .title-sm {
 	font-size: $fz-h3;
-	line-height: 1.4;
-	margin: 1em auto .5em;
+	@include heading($fz-h3);
 }
 
 .flow {
 	font-size: $fz;
 	margin: 1em auto 12vh;
-	max-width: 800px;
+	@include type-width();
 }
 
 

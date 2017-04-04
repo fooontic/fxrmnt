@@ -1,6 +1,6 @@
 html {
   font-family: $font;
-  font-size: 16px;
+  font-size: $fz-root - 2px;
 	line-height: 1.5;
 	min-width: 375px;
 	-webkit-font-smoothing: antialiased;
@@ -16,7 +16,7 @@ html {
 
 @media ($min-md) {
 	html {
-		font-size: 24px;
+		font-size: $fz-root;
 	}
 }
 

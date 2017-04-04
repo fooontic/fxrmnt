@@ -54,9 +54,36 @@
 		}
 	}
 
-	.plant {
-		display: none;
-		transition: right .4s ease;
+	// .plant {
+	// 	display: none;
+	// 	transition: right .4s ease;
+	// }
+
+	&__pieces {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 6.5vw;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		margin-bottom: 10vh;
+	}
+
+	&__pieces-item {
+		width: 100%;
+		margin: 0 auto 3vh;
+		font-size: $fz-sm;
+		box-sizing: border-box;
+	}
+
+	&__pieces-item img {
+		@include img-fluid();
+		max-width: 104%;
+		margin: 0 -2% 1vh;
+	}
+
+	&__pieces-item figcaption {
+		color: #666;
 	}
 }
 
@@ -93,18 +120,23 @@
 			}
 		}
 
-		.plant {
-			display: block;
-			position: absolute;
-			width: 16vw;
-			height: auto;
-			max-width: 198px;
-			right: -6%;
-			bottom: -10%;
+		// .plant {
+		// 	display: block;
+		// 	position: absolute;
+		// 	width: 16vw;
+		// 	height: auto;
+		// 	max-width: 198px;
+		// 	right: -6%;
+		// 	bottom: -10%;
+		//
+		// 	& img {
+		// 		@include img-fluid();
+		// 	}
+		// }
 
-			& img {
-				@include img-fluid();
-			}
+		&__pieces {
+			align-items: flex-end;
+			margin: 0 auto 10vh;
 		}
 	}
 }
@@ -112,9 +144,27 @@
 @media ($min-lg) {
 	.calculator {
 
-		.plant {
-			width: 14vw;
-			right: -2%;
+		// .plant {
+		// 	width: 14vw;
+		// 	right: -2%;
+		// }
+
+		&__pieces {
+			padding: 0 2%;
+		}
+
+		&__pieces-item {
+			width: 50%;
+			flex: 1 1 50%;
+			padding: 0 20px;
+
+			&:nth-child(2) {
+				align-self: flex-start;
+			}
+
+			&:nth-child(4) {
+				margin-top: -6%;
+			}
 		}
 	}
 }
@@ -129,17 +179,17 @@
 			}
 		}
 
-		.plant {
-			right: -1vw;
-		}
+		// .plant {
+		// 	right: -1vw;
+		// }
 	}
 }
 
 
 @media (min-width: 1600px) {
 	.calculator {
-		.plant {
-			right: 0;
-		}
+		// .plant {
+		// 	right: 0;
+		// }
 	}
 }

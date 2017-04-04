@@ -62,11 +62,6 @@ body.fix-remont
 					p.flow Помимо выбора подходящего стиля отделки, есть возможность включить дополнительные опции. Гибкая разработчка калькулятора позволяет выбрать необходимые клиенту опции, указать общую площадь квартиры с&nbsp;мгновенным пересчётом стоимости ремонта.
 
 				.ruler
-					//- .ruler__inner(data-bottom="left:100vw;" data-center-center="left: 0;")
-					//- 	.ruler-gif
-					//- 		img(src="img/ruler.gif", alt="Линейка выбора площади")
-					//- 	.ruler-info(data-center-top="opacity: 0; transform: translateY(-50%);" data-center-center="opacity: 1; transform: translateY(0);")
-					//- 		img(src="img/calc-info.png", alt="Линейка выбора площади")
 
 					.ruler__inner.wow.rulerAppear
 						.ruler-gif
@@ -74,14 +69,31 @@ body.fix-remont
 						.ruler-info
 							img(src="img/calc-info.png", alt="Линейка выбора площади")
 
-				.container
-					.case
-						.case__video
-							video(autoplay loop muted)
-								source(src="video/calc.webm" type="video/webm")
-								source(src="video/calc.mp4" type="video/mp4")
-					.plant
-						img(src="img/plant.png")
+				//- .container
+				//- 	.case
+				//- 		.case__video
+				//- 			video(autoplay loop muted)
+				//- 				source(src="video/calc.webm" type="video/webm")
+				//- 				source(src="video/calc.mp4" type="video/mp4")
+				//- 	.plant
+				//- 		img(src="img/plant.png")
+				
+				.calculator__pieces
+					figure.calculator__pieces-item
+						img(src="img/calc-1.jpg", alt="Карточки выбора дизайна")
+						figcaption Выбор стиля
+						
+					figure.calculator__pieces-item
+						img(src="img/calc-2.jpg", alt="Параметры калькулятора")
+						figcaption Настройка
+						
+					figure.calculator__pieces-item
+						img(src="img/calc-3.jpg", alt="Итоговая смета")
+						figcaption Итоговая смета
+						
+					figure.calculator__pieces-item
+						img(src="img/calc-4.jpg", alt="Обзор выбранного")
+						figcaption Наглядный обзор выбранного
 
 
 

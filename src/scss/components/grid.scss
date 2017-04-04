@@ -7,12 +7,19 @@
 	padding: 0 6.5vw;
 	position: relative;
 	margin: 0 auto;
+	transition: padding .2s ease-out;
 }
 
 
 
 @media ($min-lg) {
 	.container {
-		padding: 0 calc(8.33% + 20px);
+		padding: 0 10%;
+	}
+}
+
+@media (min-width: 1465px) {
+	.container {
+		padding: 0 144px;
 	}
 }
