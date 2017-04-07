@@ -1,10 +1,27 @@
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-delay: .2s;
+}
+
+
+
 @keyframes enterDown {
 	from {
 		transform: translateY(-100%);
+		opacity: 0;
+	}
+	70% {
+		opacity: 1;
 	}
 	to {
 		transform: translateY(0);
 	}
+}
+
+.enterDown {
+	animation-name: enterDown;
+	animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);
 }
 
 
@@ -17,14 +34,23 @@
 	}
 }
 
+.enterRight {
+	animation-name: enterRight;
+}
+
 
 @keyframes slideInDown {
 	from {
-		transform: translateY(-20px);
+		transform: translateY(-30px);
 	}
 	to {
 		transform: translateY(0);
 	}
+}
+
+.slideInDown {
+	animation-name: slideInDown;
+	animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);
 }
 
 
@@ -35,6 +61,10 @@
 		to {
 			transform: translateY(0);
 		}
+}
+
+.slideInUp {
+	animation-name: slideInUp;
 }
 
 
@@ -49,6 +79,10 @@
 	}
 }
 
+.headerBgIn {
+	animation-name: headerBgIn;
+}
+
 
 @keyframes cardsShadowAppear {
 	from {
@@ -58,13 +92,25 @@
 	}
 }
 
+.cardsShadowAppear {
+	animation-name: cardsShadowAppear;
+}
+
 
 @keyframes rulerAppear {
 	from {
 		left: 150vw;
-	} to {
+		opacity: 0;
+	} 70% {
+		opacity: 1;
+	}
+	to {
 		left: 0;
 	}
+}
+
+.rulerAppear {
+	animation-name: rulerAppear;
 }
 
 
@@ -76,4 +122,23 @@
 		transform: translateY(0);
 		opacity: 1;
 	}
+}
+
+.fadeInDown {
+	animation-name: fadeInDown;
+}
+
+
+@keyframes caseShadowAppear {
+	from {
+		box-shadow: 0 0 0 0 rgba(0,0,0,.0);
+	} to {
+		box-shadow: initial;
+	}
+}
+
+.caseShadowAppear {
+	// animation-name: caseShadowAppear;
+	animation-delay: .8s;
+	animation-timing-function: ease-out;
 }

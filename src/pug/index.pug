@@ -18,7 +18,7 @@ body.fix-remont
 			.container
 				h1.main-title
 					span.frame
-						span Fix Remont
+						span.main-title__text Fix Remont
 					span.frame
 						span.main-title__desc Разработка сайта для проекта студии братьев Жилиных
 
@@ -34,11 +34,13 @@ body.fix-remont
 			section.intro
 				.container
 
-					h2.title Ремонт — это легко!
-					p.flow «Fix Ремонт» качественно и&nbsp;эффективно решает комплекс задач, связанных с&nbsp;ремонтом квартиры. Перед нами стояла задача спроектировать сервис, отличающий его среди конкурирующих студий выполняющих «ремонт под ключ».
+					h2.title.wow.slideInDown(data-wow-offset="100")
+						span.wow.enterDown(data-wow-offset="100") Ремонт — это легко!
+					.flow.wow.slideInDown(data-wow-offset="100")
+						p.wow.enterDown(data-wow-offset="100") «Fix Ремонт»&nbsp;— новый проект студии Братьев Жилиных. Компания ремонтирует квартиры в&nbsp;типовых домах в&nbsp;соотвествии с&nbsp;тремя стандартизированными дизайн-проектами. Наша задача была спроектировать сервис, отличающийся среди конкурентов.
 
-					.case
-						picture.case__img
+					.case.wow(data-wow-offset="100")
+						picture.case__img.wow.enterDown(data-wow-offset="100")
 							source(media="(min-width: 320px) and (max-width: 767px)" srcset="img/main-page--sm.jpg" alt="Главная страница сайта Fix Remont")
 							source(media="(min-width: 767px) and (max-width: 1023px)" srcset="img/main-page--md.jpg" alt="Главная страница сайта Fix Remont")
 							source(srcset="img/main-page.jpg" media="(min-width: 1024px)" alt="Главная страница сайта Fix Remont")
@@ -58,15 +60,17 @@ body.fix-remont
 			section.calculator
 
 				.container
-					h2.title Калькулятор
-					p.flow Помимо выбора подходящего стиля отделки, есть возможность включить дополнительные опции. Гибкая разработчка калькулятора позволяет выбрать необходимые клиенту опции, указать общую площадь квартиры с&nbsp;мгновенным пересчётом стоимости ремонта.
+					h2.title.wow.slideInDown(data-wow-offset="100")
+						span.wow.enterDown(data-wow-offset="100") Калькулятор
+					.flow.wow.slideInDown(data-wow-offset="100")
+						p.wow.enterDown(data-wow-offset="100") Мы&nbsp;создали гибкий инструмент для расчёта стоимости ремонта. Помимо метража и стиля отделки выбирайте интересующие опции: тёплый пол, количество окон, вентиляция и&nbsp;другие. Калькулятор мгновенно пересчитывает указанные данные и&nbsp;выдаёт точную смету.
 
 				.ruler
 
-					.ruler__inner.wow.rulerAppear
+					.ruler__inner.wow.rulerAppear(data-wow-delay=".5s")
 						.ruler-gif
 							img(src="img/ruler-30fps.gif", alt="Линейка выбора площади")
-						.ruler-info
+						.ruler-info.wow.fadeInDown
 							img(src="img/calc-info.png", alt="Линейка выбора площади")
 
 				//- .container
@@ -80,19 +84,23 @@ body.fix-remont
 				
 				.calculator__pieces
 					figure.calculator__pieces-item
-						img(src="img/calc-1.jpg", alt="Карточки выбора дизайна")
+						.frame.wow.enterDown
+							img(src="img/calc-1.jpg", alt="Карточки выбора дизайна" data-wow-delay=".2s" data-wow-offset="100").wow.enterDown
 						figcaption Выбор стиля
 						
 					figure.calculator__pieces-item
-						img(src="img/calc-2.jpg", alt="Параметры калькулятора")
+						.frame.wow.enterDown
+							img(src="img/calc-2.jpg", alt="Параметры калькулятора" data-wow-delay=".3s" data-wow-offset="100").wow.enterDown
 						figcaption Настройка
 						
 					figure.calculator__pieces-item
-						img(src="img/calc-3.jpg", alt="Итоговая смета")
+						.frame.wow.enterDown
+							img(src="img/calc-3.jpg", alt="Итоговая смета" data-wow-delay=".4s" data-wow-offset="100").wow.enterDown
 						figcaption Итоговая смета
 						
 					figure.calculator__pieces-item
-						img(src="img/calc-4.jpg", alt="Обзор выбранного")
+						.frame.wow.slideInDown
+							img(src="img/calc-4.jpg", alt="Обзор выбранного" data-wow-delay=".5s" data-wow-offset="100").wow.enterDown
 						figcaption Наглядный обзор выбранного
 
 
@@ -100,23 +108,28 @@ body.fix-remont
 			section.components
 
 				.container
-					h2.title Компонентная структура
-					p.flow Весь сайт состоит из&nbsp;взаимозаменяемых компонентов. Компонентом может считать изображение с&nbsp;описанием, текстовый блок, выбор типа отделки и&nbsp;т.д. Такой подход позволяет собирать сайт как «конструктор», создавать новые страницы и&nbsp;менять блоки местами без ущерба визуальной составлябщей, через собственную систему администрирования сайта.
+					h2.title.wow.slideInDown(data-wow-offset="100")
+						span.wow.enterDown(data-wow-offset="100") Компонентная структура
+					.flow.wow.slideInDown(data-wow-offset="100")
+						p.wow.enterDown(data-wow-offset="100") Сайт состоит из&nbsp;взаимозаменяемых компонентов. Компонент это — изображение с&nbsp;описанием, слайдер, текстовый блок, выбор типа отделки и&nbsp;т.д. С&nbsp;таким подходом сайт собирается словно «конструктор». Легко создавать новые страницы и менять блоки местами без ущерба визуальной составляющей, через собственную систему администрирования сайта.
 
-					.case
+					.case.wow(data-wow-offset="100")
 						.components-bg(data-bottom-top="background-position: center 100%" data-top-bottom="background-position: center 40%")
-						.case__video
-							video(autoplay loop muted)
-								source(src="video/admin.webm" type="video/webm")
-								source(src="video/admin.mp4" type="video/mp4")
+						.frame
+							.case__video.wow.enterDown(data-wow-offset="100")
+								video(autoplay loop muted)
+									source(src="video/admin.webm" type="video/webm")
+									source(src="video/admin.mp4" type="video/mp4")
 
 
 
 			section.responsive
 
 				.container
-					h2.title Адаптивная версия
-					p.flow Сайт был адаптирован под различные экраны устройств. Пользователь может комфортно использовать сервис, как со&nbsp;стационарного компьютера, так и&nbsp;с&nbsp;телефона или планшета.
+					h2.title.wow.slideInDown(data-wow-offset="100")
+						span.wow.enterDown(data-wow-offset="100") Адаптивная версия
+					.flow.wow.slideInDown(data-wow-offset="100")
+						p.wow.enterDown(data-wow-offset="100") Сайт адаптирован под популярные экраны устройств. Пользователю комфортно использовать сервис, как со&nbsp;стационарного компьютера или ноутбука, так и&nbsp;с&nbsp;телефона или планшета.
 
 					.responsive__screens(data-bottom-top="left[swing]: 0%" data-top-bottom="left[swing]: -66%")
 						.responsive__screens-item
@@ -174,9 +187,12 @@ body.fix-remont
 		} else {
 			window.onload = function() {
 				var s = skrollr.init({
-					skrollrBody:'skrollr-body'
+					skrollrBody:'skrollr-body',
+					forceHeight: false
 				})
 			}
 		}
 
-		new WOW().init();
+		var wow = new WOW();
+		
+		wow.init();

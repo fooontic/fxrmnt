@@ -5,14 +5,14 @@
 	background-repeat: no-repeat;
 	overflow: hidden;
 	box-sizing: border-box;
-	margin-bottom: 10vh;
+	margin-bottom: $h-step--m;
 
 	& .m18-logo {
 		position: absolute;
 		top: 40px;
 		left: 6.5vw;
-		width: 85px;
-		height: 51px;
+		width: 70px;
+		height: auto;
 		cursor: pointer;
 		transition: transform .3s ease-in, left .3s ease-in;
 
@@ -23,6 +23,14 @@
 }
 
 
+@media ($min-md) {
+	.page-header {
+		& .m18-logo {
+			width: 85px;
+		}
+	}
+}
+
 
 
 @media ($min-lg) {
@@ -30,7 +38,7 @@
 		min-height: 660px;
 		height: 80vmin;
 		max-height: 860px;
-		margin-bottom: 18vh;
+		margin-bottom: $h-step--l;
 
 		& .m18-logo {
 			left: 50px;

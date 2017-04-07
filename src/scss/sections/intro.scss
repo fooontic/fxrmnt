@@ -1,11 +1,13 @@
 .intro {
 
+
+	margin-bottom: $h-step--m;
+
 	.design-page {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: center;
 		box-sizing: border-box;
-		margin-bottom: 10vh;
 		box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .3);
 		margin-left: -6.5vw;
 		margin-right: -6.5vw;
@@ -32,9 +34,7 @@
 
 
 	@media ($min-lg) {
-		.design-page {
-			margin-bottom: 14vh;
-		}
+		margin-bottom: $h-step--l;
 	}
 
 }

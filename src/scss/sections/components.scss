@@ -1,12 +1,15 @@
 .components {
 
-	margin-bottom: 10vh;
 	overflow: hidden;
+
+	& .case { overflow: visible;}
+	& .case:last-child {
+		margin-bottom: $h-step--m;
+	}
 }
 
 @media ($min-md) {
 	.components {
-		margin-bottom: 14vh;
 
 		&-bg {
 			position: absolute;
@@ -24,5 +27,11 @@
 			transform: translateX(-50%);
 
 		}
+	}
+}
+
+@media ($min-lg) {
+	.components .case:last-child {
+		margin-bottom: $h-step--l;
 	}
 }
