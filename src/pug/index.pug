@@ -1,13 +1,14 @@
 doctype html
-html(lang="en")
-	
+html(lang="ru")
+
 	include components/head.pug
 	-var title = "Разработка сайта для FIX Ремонт"
 	-var description = "Разработка сайта и калькулятора для FIX Ремонт. Главная, дизайн-проекты, калькулятор, компонентный подход и система администрирования, адаптивная версия."
 	-var url = "http://m18.ru/works/fixremont/"
-	-var og_image = "http://m18.ru/files/works/og/sletat.png"
+	-var og_image = "http://m18.ru/works/og/fixremont.jpg"
 	
 	+head(title, description, url, og_image)
+
 
 
 	body.cases.fix-remont#skrollr-body
@@ -157,10 +158,10 @@ html(lang="en")
 					a(href="http://fixremont.ru/").btn-sitelink 
 						span fixremont.ru
 						svg.external-link(width="36" height="36" viewBox="0 0 36 36")
-							g(fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="4" transform="translate(2 2)")
-								polyline(points="25 19 25 32 0 32 0 7 12.5 7")
-								path.arrowLine(pathLength="100" stroke-dasharray="100" stroke-dashoffset="0" d="M10,21 L32,0")
-								polyline.arrowEnd(points="19.2 0 32 0 32 12.8")
+							g(fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="4" transform="translate(2 2)").
+								<polyline points="25 19 25 32 0 32 0 7 12.5 7")/>
+								<path class="arrowLine" pathLength="100" stroke-dasharray="100" stroke-dashoffset="0" d="M10,21 L32,0"/>
+								<polyline class="arrowEnd" (points="19.2 0 32 0 32 12.8")/>
 					
 					.credits
 						h2.title-sm Над проектом работали

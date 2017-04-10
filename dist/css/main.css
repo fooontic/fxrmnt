@@ -1577,6 +1577,10 @@ html > body.cases > footer > div.container
         bottom: auto;
         left: calc(58.333% + 20px);
     }
+    .fix-remont .page-header .cards__item:after
+    {
+        display: none;
+    }
 }
 
 @media (min-width: 1200px)

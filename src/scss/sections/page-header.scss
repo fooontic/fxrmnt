@@ -113,6 +113,10 @@
 			bottom: auto;
 			left: calc(58.333% + 20px);
 		}
+
+		& .cards__item:after {
+			display: none;
+		}
 	}
 }
 
