@@ -38,7 +38,7 @@
 		background-image: url(../img/cover.jpg);
 		background-position: center bottom;
 
-		& .container { position: static;}
+		& .container-cases { position: static;}
 
 		& .main-title {
 			margin-top: 20vh;
@@ -98,7 +98,7 @@
 		flex-flow: row;
 		align-items: center;
 
-		& .container {
+		& .container-cases {
 			display: flex;
 			flex-flow: row nowrap;
 			align-items: center;

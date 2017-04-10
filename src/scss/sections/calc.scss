@@ -8,42 +8,49 @@
 		// background-repeat: repeat-x;
 		max-height: 481px;
 		margin-bottom: 10vh;
+		max-width: 1440px;
+		box-sizing: border-box;
+		margin: 0 auto;
+		position: relative;
+		background-image: url(../img/ruler__cm.jpg);
+		background-repeat: repeat-x;
+		background-size: contain;
 
-		&__inner {
-			max-width: 1440px;
-			box-sizing: border-box;
-			margin: 0 auto;
-			background-image: url(../img/ruler-cm.gif);
-			background-repeat: repeat-x;
+		&__video {
 			position: relative;
-			z-index: 100;
-			background-position-x: 0;
-			display: flex;
-			flex-flow: row nowrap;
-			align-items: center;
+			margin: 0 auto;
+			max-width: 900px;
 
 			&::before, &::after {
 				content: '';
 				display: block;
 				position: absolute;
 				height: 100%;
-				width: 200vw;
-				background-image: url(../img/ruler-cm.gif);
+				width: 150vw;
+				background-image: url(../img/ruler__cm.jpg);
 				background-repeat: repeat-x;
 				background-size: contain;
 				top: 0;
+				z-index: -1;
 			}
 
 			&::before {
 				right: 100%;
-				background-position: top right;
+				background-position: center right;
 			}
 
 			&::after {
-				left: 0;
-				z-index: -1;
-				background-position: top left;
+				left: 100%;
+				background-position: center left;
 			}
+		}
+
+		&__video video {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto;
 		}
 
 		&-info img, &-gif img {
@@ -88,33 +95,48 @@
 }
 
 
-
-
-
 @media ($min-md) {
 	.calculator {
 		.ruler {
-			margin-bottom: 12vh;
+			margin-bottom: $h-step--m;
+		}
 
-			&__inner {
-				padding-right: 6.5vw;
+		.ruler.rulerAppear {
+			// visibility: visible !important;
+			animation: rulerAppear 1s .2s cubic-bezier(0.18, 0.89, 0.32, 1.28) 1 both;
+			animation-play-state: paused;
+		}
+
+		.ruler.rulerAppear.animated {
+			animation-play-state: running;
+		}
+	}
+}
+
+
+@media ($min-lg) {
+	.calculator {
+		margin-bottom: $h-step--l;
+
+
+		.ruler {
+			margin-bottom: $h-step--l;
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+
+			&__video {
+				width: 65%;
+				margin: 0;
 			}
+
 
 			&-info {
 				display: block;
-			}
-
-			&__inner.rulerAppear {
-				// visibility: visible !important;
-				animation: rulerAppear 1s .2s cubic-bezier(0.18, 0.89, 0.32, 1.28) 1 both;
-				animation-play-state: paused;
-			}
-
-			&__inner.rulerAppear.animated {
-				animation-play-state: running;
-			}
-
-			&-info {
+				flex: 1 2 30%;
+				max-width: 30%;
+				margin-left: 10px;
+				margin-right: 4vw;
 				animation-duration: 1s;
 				animation-delay: 1.6s;
 				animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -140,17 +162,13 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
-	}
-}
 
-@media ($min-lg) {
-	.calculator {
 
 		// .plant {
 		// 	width: 14vw;
 		// 	right: -2%;
 		// }
-		margin-bottom: $h-step--l;
+
 
 		&__pieces {
 			padding: 0 2%;
@@ -167,6 +185,21 @@
 
 			&:nth-child(4) {
 				margin-top: -6%;
+				position: relative;
+
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					width: 16vw;
+					height: 16vw;
+					background-image: url(../img/plant.png);
+					background-repeat: no-repeat;
+					background-size: contain;
+					max-width: 198px;
+					right: -5%;
+					bottom: 0;
+				}
 			}
 		}
 	}

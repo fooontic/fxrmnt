@@ -52,6 +52,12 @@
 	}
 }
 
+span.caps {
+	display: inline;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
 
 
 @media ($min-md) {

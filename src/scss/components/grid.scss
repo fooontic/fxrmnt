@@ -1,4 +1,4 @@
-.container {
+.container-cases {
 	display: block;
 	box-sizing: border-box;
 	min-width: 375px;
@@ -13,13 +13,13 @@
 
 
 @media ($min-lg) {
-	.container {
+	.container-cases {
 		padding: 0 10%;
 	}
 }
 
 @media (min-width: 1465px) {
-	.container {
+	.container-cases {
 		padding: 0 144px;
 	}
 }

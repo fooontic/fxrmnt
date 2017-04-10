@@ -1,24 +1,27 @@
 doctype html
 html(lang="en")
-head
-	meta(charset="UTF-8")
-	meta(name="viewport" content="width=device-width, initial-scale=1.0")
-	meta(http-equiv="X-UA-Compatible" content="ie=edge")
-	title Fix Remont
-	link(rel="stylesheet", href="css/main.css")
+	
+	include components/head.pug
+	-var title = "Разработка сайта для FIX Ремонт"
+	-var description = "Разработка сайта и калькулятора для FIX Ремонт. Главная, дизайн-проекты, калькулятор, компонентный подход и система администрирования, адаптивная версия."
+	-var url = "http://m18.ru/works/fixremont/"
+	-var og_image = "http://m18.ru/files/works/og/sletat.png"
+	
+	+head(title, description, url, og_image)
 
 
-body.fix-remont
-	#skrollr-body
+	body.cases.fix-remont#skrollr-body
 		header.page-header(data-0="background-position: center 100%" data-top-bottom="background-position: center 40%")
 
 			a.m18-logo(href="/works/")
 				img(src="img/m18.svg", alt="M18 logo")
 
-			.container
+			.container-cases
 				h1.main-title
 					span.frame
-						span.main-title__text Fix Remont
+						span.main-title__text 
+							span.caps Fix 
+							| Ремонт
 					span.frame
 						span.main-title__desc Разработка сайта для проекта студии братьев Жилиных
 
@@ -32,12 +35,12 @@ body.fix-remont
 
 		main
 			section.intro
-				.container
+				.container-cases
 
 					h2.title.wow.slideInDown(data-wow-offset="100")
 						span.wow.enterDown(data-wow-offset="100") Ремонт — это легко!
 					.flow.wow.slideInDown(data-wow-offset="100")
-						p.wow.enterDown(data-wow-offset="100") «Fix Ремонт»&nbsp;— новый проект студии Братьев Жилиных. Компания ремонтирует квартиры в&nbsp;типовых домах в&nbsp;соотвествии с&nbsp;тремя стандартизированными дизайн-проектами. Наша задача была спроектировать сервис, отличающийся среди конкурентов.
+						p.wow.enterDown(data-wow-offset="100") «<span class="caps">Fix</span> Ремонт»&nbsp;— новый проект студии Братьев Жилиных. Компания ремонтирует квартиры в&nbsp;типовых домах в&nbsp;соотвествии с&nbsp;тремя стандартизированными дизайн-проектами. Наша задача была спроектировать сервис, отличающийся среди конкурентов.
 
 					.case.wow(data-wow-offset="100")
 						picture.case__img.wow.enterDown(data-wow-offset="100")
@@ -59,28 +62,32 @@ body.fix-remont
 
 			section.calculator
 
-				.container
+				.container-cases
 					h2.title.wow.slideInDown(data-wow-offset="100")
 						span.wow.enterDown(data-wow-offset="100") Калькулятор
 					.flow.wow.slideInDown(data-wow-offset="100")
 						p.wow.enterDown(data-wow-offset="100") Мы&nbsp;создали гибкий инструмент для расчёта стоимости ремонта. Помимо метража и стиля отделки выбирайте интересующие опции: тёплый пол, количество окон, вентиляция и&nbsp;другие. Калькулятор мгновенно пересчитывает указанные данные и&nbsp;выдаёт точную смету.
 
-				.ruler
+				.ruler.wow.rulerAppear(data-wow-delay=".5s")
 
-					.ruler__inner.wow.rulerAppear(data-wow-delay=".5s")
-						.ruler-gif
-							img(src="img/ruler-30fps.gif", alt="Линейка выбора площади")
-						.ruler-info.wow.fadeInDown
-							img(src="img/calc-info.png", alt="Линейка выбора площади")
+					//- .ruler__inner.wow.rulerAppear(data-wow-delay=".5s")
+					//- 	.ruler-gif
+					//- 		img(src="img/ruler-30fps.gif", alt="Линейка выбора площади")
+					//- 	.ruler-info.wow.fadeInDown
+					//- 		img(src="img/calc-info.png", alt="Линейка выбора площади")
+								
+					.ruler__video
+						video(autoplay loop muted poster="img/ruler.jpg")
+							source(src="video/ruler2_5_1.mp4" type="video/mp4")
+					.ruler-info.wow.fadeInDown
+						img(src="img/calc-info.png", alt="Линейка выбора площади")
 
-				//- .container
+				//- .container-cases
 				//- 	.case
 				//- 		.case__video
 				//- 			video(autoplay loop muted)
 				//- 				source(src="video/calc.webm" type="video/webm")
 				//- 				source(src="video/calc.mp4" type="video/mp4")
-				//- 	.plant
-				//- 		img(src="img/plant.png")
 				
 				.calculator__pieces
 					figure.calculator__pieces-item
@@ -107,7 +114,7 @@ body.fix-remont
 
 			section.components
 
-				.container
+				.container-cases
 					h2.title.wow.slideInDown(data-wow-offset="100")
 						span.wow.enterDown(data-wow-offset="100") Компонентная структура
 					.flow.wow.slideInDown(data-wow-offset="100")
@@ -117,7 +124,7 @@ body.fix-remont
 						.components-bg(data-bottom-top="background-position: center 100%" data-top-bottom="background-position: center 40%")
 						.frame
 							.case__video.wow.enterDown(data-wow-offset="100")
-								video(autoplay loop muted)
+								video(autoplay loop muted poster="img/admin.jpg")
 									source(src="video/admin.webm" type="video/webm")
 									source(src="video/admin.mp4" type="video/mp4")
 
@@ -125,7 +132,7 @@ body.fix-remont
 
 			section.responsive
 
-				.container
+				.container-cases
 					h2.title.wow.slideInDown(data-wow-offset="100")
 						span.wow.enterDown(data-wow-offset="100") Адаптивная версия
 					.flow.wow.slideInDown(data-wow-offset="100")
@@ -145,7 +152,7 @@ body.fix-remont
 			
 			section.credits-outer
 				
-				.container
+				.container-cases
 					
 					a(href="http://fixremont.ru/").btn-sitelink 
 						span fixremont.ru
@@ -176,23 +183,24 @@ body.fix-remont
 									li.credits__employee Ася Скульская
 									li.credits__employee Алексей Вахрушев
 					
+		include components/footer.pug
 
 
 
-	script(src="js/main.js")
-	script.
-		
-		if (Modernizr.touchevents) {
-			console.log('touch')
-		} else {
-			window.onload = function() {
-				var s = skrollr.init({
-					skrollrBody:'skrollr-body',
-					forceHeight: false
-				})
+		script(src="js/main.js")
+		script.
+			
+			if (Modernizr.touchevents) {
+				console.log('touch')
+			} else {
+				window.onload = function() {
+					var s = skrollr.init({
+						skrollrBody:'skrollr-body',
+						forceHeight: false
+					})
+				}
 			}
-		}
 
-		var wow = new WOW();
-		
-		wow.init();
+			var wow = new WOW();
+			
+			wow.init();

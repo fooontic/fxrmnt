@@ -1,0 +1,21 @@
+html > body.cases > footer {
+	font-family: 'Open Sans',sans-serif;
+	font-size: 14px;
+	line-height: 1.15;
+
+	& > div.container {
+		box-sizing: border-box;
+		min-width: 375px;
+		max-width: 1440px;
+		width: 100%;
+		padding: 100px 6.5vw 70px;
+
+		@media ($min-lg) {
+			padding: 100px 10% 70px;
+		}
+
+		@media (min-width: 1465px) {
+			padding: 100px 144px 70px;
+		}
+	}
+}
