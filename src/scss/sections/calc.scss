@@ -83,10 +83,13 @@
 		box-sizing: border-box;
 	}
 
+	&__pieces-item .frame {
+		margin: 0 -2%;
+	}
+
 	&__pieces-item img {
 		@include img-fluid();
-		max-width: 104%;
-		margin: 0 -2% 1vh;
+		margin: 0 auto;
 	}
 
 	&__pieces-item figcaption {
@@ -104,11 +107,11 @@
 		.ruler.rulerAppear {
 			// visibility: visible !important;
 			animation: rulerAppear 1s .2s cubic-bezier(0.18, 0.89, 0.32, 1.28) 1 both;
-			animation-play-state: paused;
+			// animation-play-state: paused;
 		}
 
 		.ruler.rulerAppear.animated {
-			animation-play-state: running;
+			// animation-play-state: running;
 		}
 	}
 }
@@ -176,7 +179,7 @@
 
 		&__pieces-item {
 			width: 50%;
-			flex: 1 1 50%;
+			flex: 1 1 40%;
 			padding: 0 20px;
 
 			&:nth-child(2) {
@@ -184,22 +187,22 @@
 			}
 
 			&:nth-child(4) {
-				margin-top: -6%;
+				margin-top: -12vh;
 				position: relative;
 
-				&::after {
-					content: '';
-					display: block;
-					position: absolute;
-					width: 16vw;
-					height: 16vw;
-					background-image: url(../img/plant.png);
-					background-repeat: no-repeat;
-					background-size: contain;
-					max-width: 198px;
-					right: -5%;
-					bottom: 0;
-				}
+				// &::after {
+				// 	content: '';
+				// 	display: block;
+				// 	position: absolute;
+				// 	width: 16vw;
+				// 	height: 16vw;
+				// 	background-image: url(../img/plant.png);
+				// 	background-repeat: no-repeat;
+				// 	background-size: contain;
+				// 	max-width: 198px;
+				// 	right: -5%;
+				// 	bottom: 0;
+				// }
 			}
 		}
 	}

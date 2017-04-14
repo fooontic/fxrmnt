@@ -13,8 +13,11 @@
 		margin-right: -6.5vw;
 
 		&__img img {
-			@include img-fluid();
-			width: 100%;
+			display: block;
+			width: calc(100% + 1px);
+			height: auto;
+			overflow: hidden;
+			// margin: 0 auto;
 		}
 	}
 

@@ -63,6 +63,7 @@
 	//// HOVER
 
 	&:hover, &:active {
+		color: #fff;
 		padding: .2em .8em .2em;
 		transition:
 			padding .2s,
@@ -112,7 +113,7 @@
 			}
 		}
 
-		&:hover, &:active {			
+		&:hover, &:active {
 			left: -.8em;
 
 			&::before, &::after {

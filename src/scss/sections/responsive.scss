@@ -15,6 +15,7 @@
 		box-sizing: border-box;
 		padding: 0 1vw;
 		margin-bottom: 2vw;
+		// height: 30vw;
 		max-height: 653px;
 		transition: margin-right .1s ease-out;
 
@@ -26,13 +27,18 @@
 
 		& img {
 			@include img-fluid();
+			width: 25vw;
+		}
+
+		&:nth-child(4) img {
+			width: 40vw;
 		}
 	}
 
 }
 
 
-@media ($min-md) {
+@media ($min-lg) {
 	.responsive {
 
 		&__screens {
@@ -43,13 +49,17 @@
 		}
 
 		&__screens-item {
-			max-width: none;
+			max-width: 326px;
 			flex: initial;
 
 			&:nth-child(4) {
-				max-width: none;
+				max-width: 520px;
 				flex: initial;
 			}
+		}
+
+		& .flow {
+			margin-bottom: $h-step--s;
 		}
 	}
 }

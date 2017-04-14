@@ -514,8 +514,7 @@ template
     font-weight: 700;
     font-style: normal; 
 
-    src: url('fonts/MullerBold/MullerBold.eot');
-    src: local('☺'), url('fonts/MullerBold/MullerBold.woff') format('woff'), url('fonts/MullerBold/MullerBold.woff2') format('woff2'), url('fonts/MullerBold/MullerBold.ttf') format('truetype'), url('fonts/MullerBold/MullerBold.svg') format('svg');
+    src: local('☺'), url('fonts/MullerBold/MullerBold.woff') format('woff'), url('fonts/MullerBold/MullerBold.woff2') format('woff2');
 }
 
 @font-face
@@ -524,8 +523,7 @@ template
     font-weight: 400;
     font-style: normal; 
 
-    src: url('fonts/MullerRegular/MullerRegular.eot');
-    src: local('☺'), url('fonts/MullerRegular/MullerRegular.woff') format('woff'), url('fonts/MullerRegular/MullerRegular.woff2') format('woff2'), url('fonts/MullerRegular/MullerRegular.ttf') format('truetype'), url('fonts/MullerRegular/MullerRegular.svg') format('svg');
+    src: local('☺'), url('fonts/MullerRegular/MullerRegular.woff') format('woff'), url('fonts/MullerRegular/MullerRegular.woff2') format('woff2');
 }
 
 @font-face
@@ -534,8 +532,12 @@ template
     font-weight: 900;
     font-style: normal; 
 
-    src: url('fonts/MullerBlack/MullerBlack.eot');
-    src: local('☺'), url('fonts/MullerBlack/MullerBlack.woff') format('woff'), url('fonts/MullerBlack/MullerBlack.woff2') format('woff2'), url('fonts/MullerBlack/MullerBlack.ttf') format('truetype'), url('fonts/MullerBlack/MullerBlack.svg') format('svg');
+    src: local('☺'), url('fonts/MullerBlack/MullerBlack.woff') format('woff'), url('fonts/MullerBlack/MullerBlack.woff2') format('woff2');
+}
+
+html
+{
+    min-width: 320px;
 }
 
 html > body.cases
@@ -544,7 +546,7 @@ html > body.cases
     font-size: 16px;
     line-height: 1.5;
 
-    min-width: 375px;
+    min-width: 320px;
 
     color: #262f40; 
 
@@ -737,7 +739,7 @@ span.caps
 
     box-sizing: border-box;
     width: 100%;
-    min-width: 375px;
+    min-width: 320px;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 6.5vw;
@@ -1296,6 +1298,7 @@ span.caps
     -webkit-transition-timing-function: ease-in;
             transition-timing-function: ease-in;
 
+    color: #fff;
     outline: none;
 }
 .btn-sitelink:hover::before,
@@ -1368,7 +1371,6 @@ span.caps
 
 html > body.cases > footer
 {
-    font-family: 'Open Sans',sans-serif;
     font-size: 14px;
     line-height: 1.15;
 }
@@ -1376,15 +1378,25 @@ html > body.cases > footer > div.container
 {
     box-sizing: border-box;
     width: 100%;
-    min-width: 375px;
+    min-width: 320px;
     max-width: 1440px;
     padding: 100px 6.5vw 70px;
+
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }
 @media (min-width: 1024px)
 {
     html > body.cases > footer > div.container
     {
         padding: 100px 10% 70px;
+    }
+    html > body.cases > footer > div.container > div > ul
+    {
+        font-size: 0;
+
+        padding: 24px 0 20px;
     }
 }
 @media (min-width: 1465px)
@@ -1574,7 +1586,7 @@ html > body.cases > footer > div.container
     }
     .fix-remont .page-header .promo.cards
     {
-        bottom: auto;
+        bottom: calc(50% - 224px);
         left: calc(58.333% + 20px);
     }
     .fix-remont .page-header .cards__item:after
@@ -1618,9 +1630,9 @@ html > body.cases > footer > div.container
 .fix-remont .intro .design-page__img img
 {
     display: block;
+    overflow: hidden; 
 
-    width: 100%; 
-    max-width: 100%;
+    width: calc(100% + 1px);
     height: auto;
 }
 @media (min-width: 768px)
@@ -1744,14 +1756,17 @@ html > body.cases > footer > div.container
     width: 100%;
     margin: 0 auto 3vh;
 }
+.fix-remont .calculator__pieces-item .frame
+{
+    margin: 0 -2%;
+}
 .fix-remont .calculator__pieces-item img
 {
     display: block;
 
     max-width: 100%;
-    max-width: 104%;
     height: auto;
-    margin: 0 -2% 1vh;
+    margin: 0 auto;
 }
 .fix-remont .calculator__pieces-item figcaption
 {
@@ -1771,13 +1786,6 @@ html > body.cases > footer > div.container
     {
         -webkit-animation: rulerAppear 1s .2s cubic-bezier(.18, .89, .32, 1.28) 1 both;
                 animation: rulerAppear 1s .2s cubic-bezier(.18, .89, .32, 1.28) 1 both;
-        -webkit-animation-play-state: paused;
-                animation-play-state: paused;
-    }
-    .fix-remont .calculator .ruler.rulerAppear.animated
-    {
-        -webkit-animation-play-state: running;
-                animation-play-state: running;
     }
 }
 
@@ -1846,8 +1854,8 @@ html > body.cases > footer > div.container
         padding: 0 20px; 
 
         -webkit-box-flex: 1;
-        -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
+        -ms-flex: 1 1 40%;
+            flex: 1 1 40%;
     }
     .fix-remont .calculator__pieces-item:nth-child(2)
     {
@@ -1858,25 +1866,7 @@ html > body.cases > footer > div.container
     {
         position: relative; 
 
-        margin-top: -6%;
-    }
-    .fix-remont .calculator__pieces-item:nth-child(4)::after
-    {
-        position: absolute;
-        right: -5%;
-        bottom: 0; 
-
-        display: block;
-
-        width: 16vw;
-        max-width: 198px;
-        height: 16vw;
-
-        content: '';
-
-        background-image: url(../img/plant.png);
-        background-repeat: no-repeat;
-        background-size: contain;
+        margin-top: -12vh;
     }
 }
 
@@ -1975,13 +1965,18 @@ html > body.cases > footer > div.container
 }
 .fix-remont .responsive__screens-item img
 {
-    display: block; 
+    display: block;
 
+    width: 25vw; 
     max-width: 100%;
     height: auto;
 }
+.fix-remont .responsive__screens-item:nth-child(4) img
+{
+    width: 40vw;
+}
 
-@media (min-width: 768px)
+@media (min-width: 1024px)
 {
     .fix-remont .responsive__screens
     {
@@ -1999,7 +1994,7 @@ html > body.cases > footer > div.container
     }
     .fix-remont .responsive__screens-item
     {
-        max-width: none;
+        max-width: 326px;
 
         -webkit-box-flex: initial;
         -ms-flex: initial;
@@ -2007,11 +2002,15 @@ html > body.cases > footer > div.container
     }
     .fix-remont .responsive__screens-item:nth-child(4)
     {
-        max-width: none;
+        max-width: 520px;
 
         -webkit-box-flex: initial;
         -ms-flex: initial;
             flex: initial;
+    }
+    .fix-remont .responsive .flow
+    {
+        margin-bottom: 4vh;
     }
 }
 
