@@ -1102,7 +1102,7 @@ html > body.loaded.team > div.loading
     {
         margin-top: 0;
 
-        background-position: center center;
+        background-position: center 100%;
     }
 }
 
@@ -1118,7 +1118,7 @@ html > body.loaded.team > div.loading
     {
         margin-top: 0;
 
-        background-position: center center;
+        background-position: center 100%;
     }
 }
 
@@ -2289,8 +2289,8 @@ html > body.cases > footer > div.container
 
 body.loaded .page-header
 {
-    -webkit-animation: headerBgIn .6s ease-out 1 none;
-            animation: headerBgIn .6s ease-out 1 none;
+    -webkit-animation: headerBgIn 1.1s cubic-bezier(.22, .61, .36, 1) 1 none;
+            animation: headerBgIn 1.1s cubic-bezier(.22, .61, .36, 1) 1 none;
 }
 body.loaded .page-header .main-title
 {
