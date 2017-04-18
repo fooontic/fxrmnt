@@ -24,7 +24,7 @@
 		height: 0;
 		background-color: #fff;
 		bottom: 0;
-		transition: height .3s .4s
+		transition: height .3s linear .4s
 	}
 
 	&::before {
@@ -72,8 +72,8 @@
 		outline: none;
 
 		&::before, &::after {
-			height: calc(100% + 4px);
-			transition: height .3s .2s
+			height: 101%;
+			transition: height .3s linear .2s
 		}
 
 		& span::before, & span::after {
@@ -117,7 +117,7 @@
 			left: -.8em;
 
 			&::before, &::after {
-				height: calc(100% + 6px);
+				height: 101%;
 			}
 		}
 	}

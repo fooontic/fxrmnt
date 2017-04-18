@@ -4,7 +4,7 @@
 
 	& .case { overflow: visible;}
 	& .case:last-child {
-		margin-bottom: $h-step--m;
+		margin-bottom: $h-step--l;
 	}
 }
 
@@ -19,6 +19,7 @@
 			top: 0;
 			bottom: 0;
 			left: 50%;
+			background-color: #2D3945;
 			background-image: url(../img/admin-bg.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;

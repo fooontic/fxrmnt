@@ -1,9 +1,9 @@
 .page-header {
+	background-color: #FA572E;
 	background-image: url(../img/cover--sm.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	animation: headerBgIn .6s ease-out 1 none;
 	position: relative;
 
 	& .promo.cards {
@@ -13,17 +13,12 @@
 
 	& .main-title {
 		margin-top: 24vh;
-		animation: slideInDown .8s ease-out 1 both;
 		margin-bottom: 8vh;
 	}
 
 	& .frame > span {
 		position: relative;
 		display: block;
-		animation: enterDown .8s ease-out 1 both;
-
-		&:nth-child(1) {animation-delay: .2s;}
-		&:nth-child(2) {animation-delay: .3s;}
 	}
 
 }
@@ -60,7 +55,6 @@
 			overflow: hidden;
 			box-shadow: 0 20px 60px -10px rgba(0,0,0,.4);
 			position: relative;
-			animation: cardsShadowAppear .6s .8s ease-out 1 both;
 
 			&::after {
 				content: '';
@@ -75,12 +69,7 @@
 
 		& .cards__item img {
 			@include img-fluid();
-			animation: enterRight .6s ease-out 1 both;
 		}
-
-		& .cards__item:nth-child(1) img {	animation-delay: 300ms;}
-		& .cards__item:nth-child(2) img {	animation-delay: 350ms;}
-		& .cards__item:nth-child(3) img {	animation-delay: 425ms;}
 
 	}
 

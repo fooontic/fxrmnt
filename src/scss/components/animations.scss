@@ -142,3 +142,22 @@
 	animation-delay: .8s;
 	animation-timing-function: ease-out;
 }
+
+
+@keyframes loading5 {
+	from {
+		transform: translate(-78px,0)
+	}
+
+	10% {
+		transform: translate(-78px,0)
+	}
+
+	90% {
+		transform: translate(26px,0)
+	}
+
+	to {
+		transform: translate(26px,0)
+	}
+}

@@ -653,6 +653,10 @@ html > body.cases
     margin-top: 0;
     margin-bottom: 1em;
 }
+.flow p:last-child
+{
+    margin-bottom: 0;
+}
 
 span.caps
 {
@@ -672,6 +676,165 @@ span.caps
     {
         font-size: 24px;
     }
+}
+
+html > body > div.loading
+{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    background: #e9454e;
+}
+
+html > body.main > div.loading
+{
+    background: #e9454e;
+}
+
+html > body > div.loading:before,
+html > body > div.loading:after,
+html > body > div.loading > div,
+html > body > div.loading > div:before,
+html > body > div.loading > div:after
+{
+    content: '';
+}
+
+html > body > div.loading:before
+{
+    position: absolute;
+    z-index: -1;
+    bottom: 50%;
+    left: 50%;
+
+    width: 52px;
+    height: 4px;
+
+    -webkit-transform: translate(-78px, 0);
+        -ms-transform: translate(-78px, 0);
+            transform: translate(-78px, 0);
+    -webkit-animation: loading5 2s cubic-bezier(.5, .6, .6, .5) infinite;
+            animation: loading5 2s cubic-bezier(.5, .6, .6, .5) infinite; 
+
+    background: #fff;
+}
+
+html > body > div.loading > div
+{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+
+    width: 52px;
+    height: 4px;
+
+    -webkit-transform: translate(-78px, 0);
+        -ms-transform: translate(-78px, 0);
+            transform: translate(-78px, 0); 
+
+    border-right: 52px solid #e9454e;
+    border-left: 52px solid #e9454e;
+}
+
+html > body.main > div.loading > div
+{
+    border-right: 52px solid #e9454e; 
+    border-left: 52px solid #e9454e;
+}
+
+html > body > div.loading:after,
+html > body > div.loading > div:before,
+html > body > div.loading > div:after
+{
+    border-right: 4px solid #e9454e; 
+    border-left: 4px solid #e9454e;
+}
+
+html > body.main > div.loading:after,
+html > body.main > div.loading > div:before,
+html > body.main > div.loading > div:after
+{
+    border-right: 4px solid #e9454e; 
+    border-left: 4px solid #e9454e;
+}
+
+html > body > div.loading:after
+{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+}
+
+html > body > div.loading > div:before,
+html > body > div.loading > div:after
+{
+    position: absolute;
+    top: 0;
+
+    width: 4px;
+    height: 4px;
+}
+
+html > body > div.loading > div:before
+{
+    left: 4px;
+}
+
+html > body > div.loading > div:after
+{
+    right: 4px;
+}
+
+html > body.loaded > div.loading
+{
+    z-index: 400;
+    left: -100%;
+
+    visibility: hidden;
+
+    height: 0;
+    padding-right: 32.8%;
+
+    -webkit-transition: left 1s ease .5s,opacity .2s ease 1.5s,height 0 linear 1.7s,visibility 0 linear 1.7s;
+            transition: left 1s ease .5s,opacity .2s ease 1.5s,height 0 linear 1.7s,visibility 0 linear 1.7s;
+}
+
+html > body.loaded > div.loading:before,
+html > body.loaded > div.loading:after,
+html > body.loaded > div.loading > div:before,
+html > body.loaded > div.loading > div:after
+{
+    /* opacity:0; */
+    -webkit-animation: none;
+            animation: none;
+}
+
+@media screen and (min-width: 1400px)
+{
+    html > body.loaded > div.loading
+    {
+        padding-right: 460px;
+    }
+}
+
+html > body.loaded.works > div.loading,
+html > body.loaded.team > div.loading
+{
+    padding-right: 0;
 }
 
 .page-header
@@ -1111,6 +1274,54 @@ span.caps
             animation-delay: .8s;
 }
 
+@-webkit-keyframes loading5
+{
+    from
+    {
+        -webkit-transform: translate(-78px, 0);
+                transform: translate(-78px, 0);
+    }
+    10%
+    {
+        -webkit-transform: translate(-78px, 0);
+                transform: translate(-78px, 0);
+    }
+    90%
+    {
+        -webkit-transform: translate(26px, 0);
+                transform: translate(26px, 0);
+    }
+    to
+    {
+        -webkit-transform: translate(26px, 0);
+                transform: translate(26px, 0);
+    }
+}
+
+@keyframes loading5
+{
+    from
+    {
+        -webkit-transform: translate(-78px, 0);
+                transform: translate(-78px, 0);
+    }
+    10%
+    {
+        -webkit-transform: translate(-78px, 0);
+                transform: translate(-78px, 0);
+    }
+    90%
+    {
+        -webkit-transform: translate(26px, 0);
+                transform: translate(26px, 0);
+    }
+    to
+    {
+        -webkit-transform: translate(26px, 0);
+                transform: translate(26px, 0);
+    }
+}
+
 .case
 {
     position: relative;
@@ -1248,8 +1459,8 @@ span.caps
     height: 0;
 
     content: '';
-    -webkit-transition: height .3s .4s;
-            transition: height .3s .4s; 
+    -webkit-transition: height .3s linear .4s;
+            transition: height .3s linear .4s; 
 
     background-color: #fff;
 }
@@ -1306,10 +1517,10 @@ span.caps
 .btn-sitelink:active::before,
 .btn-sitelink:active::after
 {
-    height: calc(100% + 4px);
+    height: 101%;
 
-    -webkit-transition: height .3s .2s;
-            transition: height .3s .2s;
+    -webkit-transition: height .3s linear .2s;
+            transition: height .3s linear .2s;
 }
 .btn-sitelink:hover span::before,
 .btn-sitelink:hover span::after,
@@ -1365,7 +1576,7 @@ span.caps
     .btn-sitelink:active::before,
     .btn-sitelink:active::after
     {
-        height: calc(100% + 6px);
+        height: 101%;
     }
 }
 
@@ -1411,9 +1622,7 @@ html > body.cases > footer > div.container
 {
     position: relative; 
 
-    -webkit-animation: headerBgIn .6s ease-out 1 none;
-            animation: headerBgIn .6s ease-out 1 none;
-
+    background-color: #fa572e;
     background-image: url(../img/cover--sm.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -1429,29 +1638,13 @@ html > body.cases > footer > div.container
 .fix-remont .page-header .main-title
 {
     margin-top: 24vh;
-    margin-bottom: 8vh; 
-
-    -webkit-animation: slideInDown .8s ease-out 1 both;
-            animation: slideInDown .8s ease-out 1 both;
+    margin-bottom: 8vh;
 }
 .fix-remont .page-header .frame > span
 {
     position: relative;
 
     display: block;
-
-    -webkit-animation: enterDown .8s ease-out 1 both;
-            animation: enterDown .8s ease-out 1 both;
-}
-.fix-remont .page-header .frame > span:nth-child(1)
-{
-    -webkit-animation-delay: .2s;
-            animation-delay: .2s;
-}
-.fix-remont .page-header .frame > span:nth-child(2)
-{
-    -webkit-animation-delay: .3s;
-            animation-delay: .3s;
 }
 
 @media (min-width: 768px)
@@ -1494,14 +1687,11 @@ html > body.cases > footer > div.container
     }
     .fix-remont .page-header .cards__item
     {
-        position: relative;
+        position: relative; 
 
         overflow: hidden;
 
         margin-right: 3vw;
-
-        -webkit-animation: cardsShadowAppear .6s .8s ease-out 1 both;
-                animation: cardsShadowAppear .6s .8s ease-out 1 both; 
 
         border-radius: 5px;
         box-shadow: 0 20px 60px -10px rgba(0, 0, 0, .4);
@@ -1523,28 +1713,10 @@ html > body.cases > footer > div.container
     }
     .fix-remont .page-header .cards__item img
     {
-        display: block;
+        display: block; 
 
         max-width: 100%;
         height: auto;
-
-        -webkit-animation: enterRight .6s ease-out 1 both;
-                animation: enterRight .6s ease-out 1 both;
-    }
-    .fix-remont .page-header .cards__item:nth-child(1) img
-    {
-        -webkit-animation-delay: 300ms;
-                animation-delay: 300ms;
-    }
-    .fix-remont .page-header .cards__item:nth-child(2) img
-    {
-        -webkit-animation-delay: 350ms;
-                animation-delay: 350ms;
-    }
-    .fix-remont .page-header .cards__item:nth-child(3) img
-    {
-        -webkit-animation-delay: 425ms;
-                animation-delay: 425ms;
     }
 }
 
@@ -1880,7 +2052,7 @@ html > body.cases > footer > div.container
 }
 .fix-remont .components .case:last-child
 {
-    margin-bottom: 6vh;
+    margin-bottom: 10vh;
 }
 
 @media (min-width: 768px)
@@ -1901,6 +2073,7 @@ html > body.cases > footer > div.container
             -ms-transform: translateX(-50%);
                 transform: translateX(-50%); 
 
+        background-color: #2d3945;
         background-image: url(../img/admin-bg.jpg);
         background-repeat: no-repeat;
         background-position: center;
@@ -2111,5 +2284,60 @@ html > body.cases > footer > div.container
     .fix-remont .credits-outer
     {
         background-position: bottom center;
+    }
+}
+
+body.loaded .page-header
+{
+    -webkit-animation: headerBgIn .6s ease-out 1 none;
+            animation: headerBgIn .6s ease-out 1 none;
+}
+body.loaded .page-header .main-title
+{
+    -webkit-animation: slideInDown .8s ease-out 1 both;
+            animation: slideInDown .8s ease-out 1 both;
+}
+body.loaded .page-header .frame > span
+{
+    -webkit-animation: enterDown .8s ease-out 1 both;
+            animation: enterDown .8s ease-out 1 both;
+}
+body.loaded .page-header .frame > span:nth-child(1)
+{
+    -webkit-animation-delay: .2s;
+            animation-delay: .2s;
+}
+body.loaded .page-header .frame > span:nth-child(2)
+{
+    -webkit-animation-delay: .3s;
+            animation-delay: .3s;
+}
+
+@media (min-width: 768px)
+{
+    .loaded > .page-header .cards__item
+    {
+        -webkit-animation: cardsShadowAppear .6s .8s ease-out 1 both;
+                animation: cardsShadowAppear .6s .8s ease-out 1 both;
+    }
+    .loaded > .page-header .cards__item img
+    {
+        -webkit-animation: enterRight .6s ease-out 1 both;
+                animation: enterRight .6s ease-out 1 both;
+    }
+    .loaded > .page-header .cards__item:nth-child(1) img
+    {
+        -webkit-animation-delay: 300ms;
+                animation-delay: 300ms;
+    }
+    .loaded > .page-header .cards__item:nth-child(2) img
+    {
+        -webkit-animation-delay: 350ms;
+                animation-delay: 350ms;
+    }
+    .loaded > .page-header .cards__item:nth-child(3) img
+    {
+        -webkit-animation-delay: 425ms;
+                animation-delay: 425ms;
     }
 }

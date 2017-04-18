@@ -13,6 +13,7 @@
 @import "mixins/frame";
 @import "core/type";
 
+@import "components/preloader";
 @import "components/header";
 @import "components/grid";
 @import "components/animations";
@@ -30,3 +31,5 @@
 	@import "sections/responsive";
 	@import "sections/credits";
 }
+
+@import "sections/page-header_animation";

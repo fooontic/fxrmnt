@@ -12,6 +12,9 @@ html(lang="ru")
 
 
 	body.cases.fix-remont#skrollr-body
+		.loading
+			div
+		
 		header.page-header(data-0="background-position: center 100%" data-top-bottom="background-position: center 40%")
 
 			a.m18-logo(href="/works/")
@@ -191,14 +194,26 @@ html(lang="ru")
 		script(src="js/main.js")
 		script.
 			
-			if (Modernizr.touchevents) {
-				console.log('touch')
+
+			function preloader() {
+				var bodyElem = document.getElementById('skrollr-body');
+				
+				setTimeout(function(){
+					bodyElem.classList.add('loaded');
+					console.log('wtf?');
+				} , 1000);
+			};
+			
+			if (Modernizr.touchevents) {				
+				preloader();
+				console.log('touch');
 			} else {
-				window.onload = function() {
+				window.onload = function() {					
+					preloader();
 					var s = skrollr.init({
 						skrollrBody:'skrollr-body',
 						forceHeight: false
-					})
+					});
 				}
 			}
 
