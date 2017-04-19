@@ -41,10 +41,10 @@ html(lang="ru")
 			section.intro
 				.container-cases
 
-					h2.title.wow.slideInDown(data-wow-offset="100")
-						span.wow.enterDown(data-wow-offset="100") Ремонт — это легко!
-					.flow.wow.slideInDown(data-wow-offset="100")
-						p.wow.enterDown(data-wow-offset="100") «<span class="caps">Fix</span> Ремонт»&nbsp;— новый проект студии Братьев Жилиных. Компания ремонтирует квартиры в&nbsp;типовых домах в&nbsp;соответствии с&nbsp;тремя разработанными студией дизайн‐проектами. Наша задача заключалась в&nbsp;разработке сайта, рассказывающего о&nbsp;проекте и дающего возможность удобного расчёта стоимости ремонта своей квартиры.
+					h2.title.wow.slideInDown
+						span.wow.enterDown Ремонт — это легко!
+					.flow.wow.slideInDown(data-wow-offset="50")
+						p.wow.enterDown(data-wow-offset="50") «<span class="caps">Fix</span> Ремонт»&nbsp;— новый проект студии Братьев Жилиных. Компания ремонтирует квартиры в&nbsp;типовых домах в&nbsp;соответствии с&nbsp;тремя разработанными студией дизайн‐проектами. Наша задача заключалась в&nbsp;разработке сайта, рассказывающего о&nbsp;проекте и дающего возможность удобного расчёта стоимости ремонта своей квартиры.
 
 					.case.wow(data-wow-offset="100")
 						picture.case__img.wow.enterDown(data-wow-offset="100")
@@ -173,7 +173,7 @@ html(lang="ru")
 								ul.credits__employee-list
 									li.credits__employee Денис Шумов
 								
-							li.credits__dep-item Менеджер
+							li.credits__dep-item Руководитель проекта
 								ul.credits__employee-list
 									li.credits__employee Михаил Кучин
 							
@@ -200,7 +200,6 @@ html(lang="ru")
 				
 				setTimeout(function(){
 					bodyElem.classList.add('loaded');
-					console.log('wtf?');
 				} , 1000);
 			};
 			

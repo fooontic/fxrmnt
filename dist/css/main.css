@@ -1823,6 +1823,27 @@ html > body.cases > footer > div.container
         margin-bottom: 10vh;
     }
 }
+@media (min-width: 1200px)
+{
+    .fix-remont .intro .container-cases::before
+    {
+        position: absolute;
+        top: -7px;
+        left: 50%;
+
+        width: 5vw;
+        max-width: 56px;
+        height: 5vw;
+        margin-left: -440px;
+
+        content: '';
+
+        background-image: url(../img/fixremont_logo.svg);
+        background-repeat: no-repeat;
+        background-position: center top; 
+        background-size: contain;
+    }
+}
 
 .fix-remont .calculator
 {

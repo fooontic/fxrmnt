@@ -40,4 +40,21 @@
 		margin-bottom: $h-step--l;
 	}
 
+	@media (min-width: 1200px) {
+		.container-cases::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: -7px;
+			margin-left: -440px;
+			width: 5vw;
+			height: 5vw;
+			max-width: 56px;
+			background-image: url(../img/fixremont_logo.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center top;
+		}
+	}
+
 }
