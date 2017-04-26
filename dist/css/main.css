@@ -1435,7 +1435,7 @@ html > body.loaded.team > div.loading
 
     box-sizing: border-box;
     margin: 0 auto;
-    margin: 0 auto 2em;
+    margin: 0 auto 1.6em;
     padding: .2em 0 .2em;
 
     -webkit-transition: padding .1s ease-out .7s, left .1s ease-out .7s;
@@ -1596,6 +1596,10 @@ html > body.cases > footer > div.container
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+}
+html > body.cases > footer > div.container > .main-social
+{
+    margin: 0 auto;
 }
 @media (min-width: 1024px)
 {
@@ -1786,7 +1790,7 @@ html > body.cases > footer > div.container
     display: flex;
 
     box-sizing: border-box;
-    margin-right: -6.5vw; 
+    margin-right: calc((6.5vw - 1px) * -1); 
     margin-left: -6.5vw;
 
     box-shadow: 0 15px 80px -10px rgba(0, 0, 0, .3);
@@ -2233,14 +2237,14 @@ html > body.cases > footer > div.container
 
     list-style-type: none;
 }
-.fix-remont .credits__dep-list
+.fix-remont .credits__desk-list
 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 
-    max-width: 440px; 
-    margin: 3em -15px 4em;
+    max-width: 600px; 
+    margin: 3em -15px 0;
     padding: 0;
 
     -webkit-box-orient: horizontal;
@@ -2251,15 +2255,17 @@ html > body.cases > footer > div.container
     -ms-flex-pack: start;
     justify-content: flex-start;
 }
-.fix-remont .credits__dep-item
+.fix-remont .credits__desk
 {
     box-sizing: border-box;
-    width: calc(50% - 15px);
-    padding: 0 15px; 
+    width: calc(33.33333% - 15px);
+    min-width: 150px;
+    margin-bottom: 1em; 
+    padding: 0 15px;
 
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 calc(50% - 15px);
-        flex: 1 1 calc(50% - 15px);
+    -ms-flex: 1 1 calc(33.33333% - 15px);
+        flex: 1 1 calc(33.33333% - 15px);
 }
 .fix-remont .credits__employee-list
 {
@@ -2269,17 +2275,20 @@ html > body.cases > footer > div.container
 }
 .fix-remont .credits__employee
 {
+    font-weight: bold; 
+
     position: relative;
 
-    margin-bottom: .2em; 
-    padding-left: 1em;
+    margin-bottom: .2em;
+    padding-left: 0;
 }
-.fix-remont .credits__employee::before
+.fix-remont .credits__role
 {
-    position: absolute;
-    left: 0; 
+    line-height: 1.2;
 
-    content: '—';
+    min-height: 2.4em; 
+    margin-bottom: 1.6em;
+    margin-left: 0;
 }
 .fix-remont .credits-outer .btn-sitelink
 {

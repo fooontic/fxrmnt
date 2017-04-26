@@ -5,7 +5,7 @@ html(lang="ru")
 	-var title = "Разработка сайта для FIX Ремонт"
 	-var description = "Разработка сайта и калькулятора для FIX Ремонт. Главная, дизайн-проекты, калькулятор, компонентный подход и система администрирования, адаптивная версия."
 	-var url = "http://m18.ru/works/fixremont/"
-	-var og_image = "http://m18.ru/works/og/fixremont.jpg"
+	-var og_image = "http://m18.ru/works/fixremont/og/fixremont.jpg"
 	
 	+head(title, description, url, og_image)
 
@@ -44,7 +44,7 @@ html(lang="ru")
 					h2.title.wow.slideInDown
 						span.wow.enterDown Ремонт — это легко!
 					.flow.wow.slideInDown(data-wow-offset="50")
-						p.wow.enterDown(data-wow-offset="50") «<span class="caps">Fix</span> Ремонт»&nbsp;— новый проект студии Братьев Жилиных. Компания ремонтирует квартиры в&nbsp;типовых домах в&nbsp;соответствии с&nbsp;тремя разработанными студией дизайн‐проектами. Наша задача заключалась в&nbsp;разработке сайта, рассказывающего о&nbsp;проекте и дающего возможность удобного расчёта стоимости ремонта своей квартиры.
+						p.wow.enterDown(data-wow-offset="50") «<span class="caps">Fix</span> Ремонт»&nbsp;— новый проект студии Братьев Жилиных. Компания ремонтирует квартиры в&nbsp;типовых домах в&nbsp;соответствии с&nbsp;тремя разработанными студией дизайн‐проектами. Мы разработали сайт рассказывающий о&nbsp;проекте с&nbsp;расчётом стоимости ремонта своей квартиры.
 
 					.case.wow(data-wow-offset="100")
 						picture.case__img.wow.enterDown(data-wow-offset="100")
@@ -70,7 +70,7 @@ html(lang="ru")
 					h2.title.wow.slideInDown(data-wow-offset="100")
 						span.wow.enterDown(data-wow-offset="100") Калькулятор
 					.flow.wow.slideInDown(data-wow-offset="100")
-						p.wow.enterDown(data-wow-offset="100") Мы создали гибкий инструмент для расчёта стоимости ремонта. Помимо метража и стиля отделки, можно выбирать многочисленные опции: тёплый пол, окна, вентиляцию, двери. Калькулятор мгновенно всё пересчитывает и выдаёт точную смету, которую можно сохранить, распечатать или отправить себе на почту. 
+						p.wow.enterDown(data-wow-offset="100") Это гибкий инструмент расчёта стоимости ремонта. Помимо метража и&nbsp;стиля отделки, можно выбирать многочисленные опции: тёплый пол, окна, вентиляцию, двери. Калькулятор мгновенно пересчитывает и выдаёт точную смету, которую можно сохранить, распечатать или отправить себе на почту.  
 
 				.ruler.wow.rulerAppear(data-wow-delay=".5s")
 
@@ -95,23 +95,23 @@ html(lang="ru")
 				
 				.calculator__pieces
 					figure.calculator__pieces-item
-						.frame.wow.enterDown
-							img(src="img/calc-1.jpg", alt="Карточки выбора дизайна" data-wow-delay=".2s" data-wow-offset="100").wow.enterDown
+						.frame
+							img(src="img/calc-1.jpg", alt="Карточки выбора дизайна")
 						figcaption Выбор стиля
 						
 					figure.calculator__pieces-item
-						.frame.wow.enterDown
-							img(src="img/calc-2.jpg", alt="Параметры калькулятора" data-wow-delay=".3s" data-wow-offset="100").wow.enterDown
+						.frame
+							img(src="img/calc-2.jpg", alt="Параметры калькулятора")
 						figcaption Настройка
 						
 					figure.calculator__pieces-item
-						.frame.wow.enterDown
-							img(src="img/calc-3.jpg", alt="Итоговая смета" data-wow-delay=".4s" data-wow-offset="100").wow.enterDown
+						.frame
+							img(src="img/calc-3.jpg", alt="Итоговая смета")
 						figcaption Итоговая смета
 						
 					figure.calculator__pieces-item
-						.frame.wow.slideInDown
-							img(src="img/calc-4.jpg", alt="Обзор выбранного" data-wow-delay=".5s" data-wow-offset="100").wow.enterDown
+						.frame
+							img(src="img/calc-4.jpg", alt="Обзор выбранного")
 						figcaption Наглядный обзор выбранного
 
 
@@ -122,7 +122,7 @@ html(lang="ru")
 					h2.title.wow.slideInDown(data-wow-offset="100")
 						span.wow.enterDown(data-wow-offset="100") Компонентная структура
 					.flow.wow.slideInDown(data-wow-offset="100")
-						p.wow.enterDown(data-wow-offset="100") Сайт состоит из&nbsp;взаимозаменяемых компонентов. Компонент&nbsp;— это группа каких‐либо информационных блоков: изображение с&nbsp;описанием, слайдер, текстовый блок, баннер или выбор типа отделки. С&nbsp;таким подходом сайт становится простым конструктором: можно быстро создавать новые страницы, добавлять, удалять или менять местами компоненты, не&nbsp;опасаясь за&nbsp;внешний вид и&nbsp;аккуратность результата. Все стили компонентов заранее настроены и&nbsp;обеспечена совместимость компонентов в&nbsp;любых комбинациях. Работа с&nbsp;сайтом идёт через специально разработанную для данного проекта систему администрирования.
+						p.wow.enterDown(data-wow-offset="100") Сайт состоит из&nbsp;взаимозаменяемых компонентов: группы информационных блоков. Это изображения с&nbsp;описанием, слайдеры, текстовые блоки, баннеры или выбор типа отделки. С&nbsp;таким подходом сайт становится простым конструктором: можно быстро создавать новые страницы, добавлять, удалять или менять местами компоненты, не&nbsp;опасаясь за&nbsp;внешний вид и&nbsp;аккуратность результата. Стили заранее настроены и&nbsp;обеспечена совместимость компонентов в&nbsp;любых комбинациях. Работа с&nbsp;сайтом идёт через разработанную для проекта систему администрирования.
 
 					.case.wow(data-wow-offset="100")
 						.components-bg(data-bottom-top="background-position: center 100%" data-top-bottom="background-position: center 40%")
@@ -140,7 +140,7 @@ html(lang="ru")
 					h2.title.wow.slideInDown(data-wow-offset="100")
 						span.wow.enterDown(data-wow-offset="100") Адаптивная версия
 					.flow.wow.slideInDown(data-wow-offset="100")
-						p.wow.enterDown(data-wow-offset="100") Сайт адаптирован под все существующие размеры дисплеев. Пользователю комфортно использовать сервис как со&nbsp;стационарного компьютера, так с&nbsp;телефона, планшета или ноутбука.
+						p.wow.enterDown(data-wow-offset="100") Сайт адаптирован под все существующие размеры дисплеев и&nbsp;типы устройств. Пользователю комфортно использовать сервис как со&nbsp;стационарного компьютера, так с&nbsp;телефона, планшета или ноутбука.
 
 					.responsive__screens(data-bottom-top="left[swing]: 0%" data-top-bottom="left[swing]: -66%")
 						.responsive__screens-item
@@ -168,25 +168,42 @@ html(lang="ru")
 					
 					.credits
 						h2.title-sm Над проектом работали
-						ul.credits__dep-list
-							li.credits__dep-item Арт-директор
-								ul.credits__employee-list
-									li.credits__employee Денис Шумов
-								
-							li.credits__dep-item Руководитель проекта
-								ul.credits__employee-list
-									li.credits__employee Михаил Кучин
-							
-							li.credits__dep-item Дизайнеры
-								ul.credits__employee-list
-									li.credits__employee Александр Ратасеп
-									li.credits__employee Сергей Дюжев
+						
+						ul.credits__desk-list
+							li.credits__desk
+								dl.credits__employee-list
+									dt.credits__employee Денис Шумов
+									dd.credits__role Арт-директор
 									
-							li.credits__dep-item Разработчики
-								ul.credits__employee-list
-									li.credits__employee Ася Скульская
-									li.credits__employee Алексей Вахрушев
-					
+									dt.credits__employee Александр Ратасеп
+									dd.credits__role Проектирование и&nbsp;дизайн
+									
+									dt.credits__employee Сергей Дюжев
+									dd.credits__role Дизайн калькулятора
+									
+									//- dt.credits__employee Михаил Кучин
+									//- dd.credits__role Руководитель проекта
+
+							li.credits__desk
+								dl.credits__employee-list
+									dt.credits__employee Андрей Волынкин
+									dd.credits__role Ведущий разработчик
+									
+									dt.credits__employee Ася Скульская
+									dd.credits__role Вёрстка и&nbsp;разработка
+									
+									dt.credits__employee Алексей Вахрушев
+									dd.credits__role Разработка калькулятора
+
+							li.credits__desk
+								dl.credits__employee-list
+									dt.credits__employee Михаил Кучин
+									dd.credits__role Руководитель проекта
+
+
+
+
+
 		include components/footer.pug
 
 
@@ -220,4 +237,4 @@ html(lang="ru")
 			
 			wow.init();
 			
-		include components/analitics.pug
+		//- include components/analitics.pug

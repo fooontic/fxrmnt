@@ -37,7 +37,7 @@ module.exports = {
 	browserSync: {
 		server: './dist',
 		baseDir: './dist',
-		tunnel: false,
+		tunnel: true,
 		host: 'localhost',
 		port: 9000,
 		injectChanges: true,

@@ -11,6 +11,8 @@ html > body.cases > footer {
 		padding: 100px 6.5vw 70px;
 		justify-content: flex-start;
 
+		& > .main-social { margin: 0 auto;}
+
 		@media ($min-lg) {
 			padding: 100px 10% 70px;
 
